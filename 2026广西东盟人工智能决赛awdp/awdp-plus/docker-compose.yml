@@ -1,0 +1,77 @@
+# AWDP Plus 还原题目 - 一键起全部 GameBox
+# 用法: docker compose up -d --build
+# 每轮刷新旗标: 修改对应 FLAG_* 变量后 docker compose up -d --force-recreate <service>
+services:
+  shift_handoff_inspector:
+    build: ./shift_handoff_inspector
+    container_name: awdp-shift_handoff_inspector
+    ports:
+      - "5000:5000"
+    environment:
+      - FLAG=${FLAG_SHIFT_HANDOFF_INSPECTOR:-flag{local-dev-5000}}
+    restart: unless-stopped
+  last_mile_dispatch_board:
+    build: ./last_mile_dispatch_board
+    container_name: awdp-last_mile_dispatch_board
+    ports:
+      - "5001:5001"
+    environment:
+      - FLAG=${FLAG_LAST_MILE_DISPATCH_BOARD:-flag{local-dev-5001}}
+    restart: unless-stopped
+  invoice_reconciliation_desk:
+    build: ./invoice_reconciliation_desk
+    container_name: awdp-invoice_reconciliation_desk
+    ports:
+      - "5002:5002"
+    environment:
+      - FLAG=${FLAG_INVOICE_RECONCILIATION_DESK:-flag{local-dev-5002}}
+    restart: unless-stopped
+  merchant_assortment_studio:
+    build: ./merchant_assortment_studio
+    container_name: awdp-merchant_assortment_studio
+    ports:
+      - "5003:5003"
+    environment:
+      - FLAG=${FLAG_MERCHANT_ASSORTMENT_STUDIO:-flag{local-dev-5003}}
+    restart: unless-stopped
+  onboarding_memory_steward:
+    build: ./onboarding_memory_steward
+    container_name: awdp-onboarding_memory_steward
+    ports:
+      - "5004:5004"
+    environment:
+      - FLAG=${FLAG_ONBOARDING_MEMORY_STEWARD:-flag{local-dev-5004}}
+    restart: unless-stopped
+  signal_triage_console:
+    build: ./signal_triage_console
+    container_name: awdp-signal_triage_console
+    ports:
+      - "5005:5005"
+    environment:
+      - FLAG=${FLAG_SIGNAL_TRIAGE_CONSOLE:-flag{local-dev-5005}}
+    restart: unless-stopped
+  release_control_tower:
+    build: ./release_control_tower
+    container_name: awdp-release_control_tower
+    ports:
+      - "5006:5006"
+    environment:
+      - FLAG=${FLAG_RELEASE_CONTROL_TOWER:-flag{local-dev-5006}}
+    restart: unless-stopped
+  runbook_sentinel:
+    build: ./runbook_sentinel
+    container_name: awdp-runbook_sentinel
+    ports:
+      - "5007:5007"
+    environment:
+      - FLAG=${FLAG_RUNBOOK_SENTINEL:-flag{local-dev-5007}}
+    restart: unless-stopped
+  ez_Render:
+    build: ./ez_Render
+    container_name: awdp-ez_Render
+    ports:
+      - "5008:5008"
+    environment:
+      - FLAG=${FLAG_EZ_RENDER:-flag{local-dev-5008}}
+    restart: unless-stopped
+    # 说明: 每题容器内 DB 位于 /app/data，服务启动时把 FLAG 写入受限 fixture

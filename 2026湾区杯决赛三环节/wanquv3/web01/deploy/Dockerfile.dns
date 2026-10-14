@@ -1,0 +1,11 @@
+# round3 web01 · 挑战专用 DNS 容器（最小依赖，纯 node 实现）
+FROM node:18-alpine
+
+WORKDIR /dns
+COPY dns/dns.js ./dns.js
+
+EXPOSE 53/udp
+
+# --no-upstream：完全离线也能解析 *.baidu.com -> 127.0.0.1
+# 想保留外网解析就改为默认（上游 223.5.5.5）
+ENTRYPOINT ["node", "dns.js", "--port", "53", "--no-upstream"]

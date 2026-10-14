@@ -1,0 +1,75 @@
+{
+  "question_id": "aE9BLf9fMqMPag7T",
+  "title": "crypto01",
+  "score": 500,
+  "real_score": 500,
+  "file_url": "https://g.ichunqiu.com/terminator/production/match_question/202609/373ab36506931e28f23987be80507c2e.zip",
+  "is_solved": true,
+  "category": "crypto",
+  "attributes": [
+    "crypto"
+  ],
+  "description": "",
+  "interactive": "false",
+  "capabilities": [
+    "crypto"
+  ],
+  "connection": [],
+  "extensions": {
+    "crypto": "crypto",
+    "attachment_provenance": {
+      "source_file_url": "https://g.ichunqiu.com/terminator/production/match_question/202609/373ab36506931e28f23987be80507c2e.zip",
+      "source_hash": "373ab36506931e28f23987be80507c2e",
+      "archived_files": [
+        "crypto01.zip",
+        "task.py"
+      ],
+      "note": "原件为 zip，已解包；归档内层文件与必要的派生件（详见本题目录 README §8）"
+    }
+  },
+  "_restore_notes": {
+    "round": "round3_1700",
+    "platform_name": "crypto01",
+    "is_solved_source": "比赛提交回执 code=0 message=恭喜您，回答正确（2026-09-14 17:11:22，work/submit_results_live.json）；平台快照 challenges_r3.json 抓取于解题前，其值为 false",
+    "flag": "flag{36e3ac06db2f4b6693b6203b5a7b0c47}",
+    "attachment_local": "attachments/crypto01.zip",
+    "attachment_size": 1118,
+    "attachment_md5": "03e6f53446009540924a11be84dbd196",
+    "attachment_sha256": "afb588b18dc55592dde762a6597e8d80eec5d341eb03ea5307e40245114e45bf",
+    "inner_files": [
+      {
+        "name": "task.py",
+        "size": 1122,
+        "md5": "7e469a7fd03ca4f5bfd7c7fb33a9792b",
+        "role": "出题脚本本体（题目即此文件）"
+      },
+      {
+        "name": "__MACOSX/._task.py",
+        "size": 177,
+        "role": "macOS 打包残留元数据（噪声）"
+      }
+    ],
+    "description_note": "平台 description 为空字符串；题面即 task.py（含末尾注释里的 n / c）",
+    "key_params": {
+      "n_bits": 1199,
+      "c_bits": 1199,
+      "e": 65537,
+      "p_bits": 600,
+      "q_bits": 600,
+      "g_bits": 575,
+      "alpha": 11192429,
+      "beta": 13346783,
+      "attack_base_a": 2,
+      "attack_hit_t": 11192429,
+      "attack_scan_limit": 16777216,
+      "attack_batch": 8192,
+      "runtime_sec": 25
+    },
+    "rebuilt_files": [
+      "deploy/src/secret.py（反推重建；用 verify_instance.py 校验可逐位复现原始 n/c）",
+      "deploy/src/gen_secret.py（新实例生成器）",
+      "deploy/src/verify_instance.py",
+      "deploy/README.md"
+    ]
+  }
+}

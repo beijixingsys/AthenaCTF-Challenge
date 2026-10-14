@@ -1,0 +1,19 @@
+{
+  "question_id": "QTer81sTgUGC2jUb",
+  "title": "web03",
+  "score": 500,
+  "real_score": 500,
+  "file_url": "",
+  "is_solved": false,
+  "category": "web",
+  "attributes": ["web"],
+  "description": "这个网站上存在两个应用程序，找到其中的关联性，挖掘其存在的漏洞，最终获取目标系统下的flag作为你的答案进行提交。",
+  "interactive": "true",
+  "capabilities": ["web"],
+  "connection": {
+    "docker_url": "https://eci-2zeb8yl7l1wi17x2qp00.cloudeci1.ichunqiu.com:80",
+    "docker_ip": "eci-2zeb8yl7l1wi17x2qp00.cloudeci1.ichunqiu.com",
+    "docker_port": 80
+  },
+  "extensions": {"web": "web"}
+}

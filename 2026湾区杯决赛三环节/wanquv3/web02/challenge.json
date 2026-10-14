@@ -1,0 +1,19 @@
+{
+  "question_id": "yahqei40sgs2n_bk",
+  "title": "web02",
+  "score": 500,
+  "real_score": 500,
+  "file_url": "",
+  "is_solved": true,
+  "category": "web",
+  "attributes": ["web"],
+  "description": "某科技公司的智能数据分析平台，凭借自主研发的大数据智能分析与研判引擎，打造了坚不可摧的全维度安全防护体系。其官网部署的AI WAF防护机制，能精准识别并阻断各类攻击请求。常规SQL注入payload会被直接拦截，但防护并非绝对不可突破，仍存在绕过与利用空间。",
+  "interactive": "true",
+  "capabilities": ["web"],
+  "connection": {
+    "docker_url": "https://eci-2ze8p67inla1hiyvsvtk.cloudeci1.ichunqiu.com:5000",
+    "docker_ip": "eci-2ze8p67inla1hiyvsvtk.cloudeci1.ichunqiu.com",
+    "docker_port": 5000
+  },
+  "extensions": {"web": "web"}
+}

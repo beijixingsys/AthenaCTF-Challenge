@@ -1,0 +1,3 @@
+# pwn01 / pwn02 solve 脚本只依赖 Python 3 标准库（socket / struct / re / time）。
+# 若想用题目原始 WP 里的 pwntools 版本脚本，可自行安装：
+# pwntools>=4.9

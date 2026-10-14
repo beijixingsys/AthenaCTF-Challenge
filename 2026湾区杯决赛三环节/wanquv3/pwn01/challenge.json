@@ -1,0 +1,55 @@
+{
+  "question_id": "F0GwTSW1UwvNdQKT",
+  "title": "pwn01",
+  "score": 500,
+  "real_score": 500,
+  "file_url": "https://g.ichunqiu.com/terminator/production/match_question/202609/d47ca8b37e58ebc1a4d2de680a7f3329.zip",
+  "is_solved": false,
+  "category": "pwn",
+  "attributes": ["pwn"],
+  "description": "（平台 description 为空）",
+  "interactive": "true",
+  "capabilities": ["pwn"],
+  "connection": {
+    "docker_url": "nc 39.106.48.123 36067",
+    "docker_ip": "39.106.48.123",
+    "docker_port": 36067
+  },
+  "extensions": {"pwn": "pwn"},
+  "_notes": {
+    "connection_warning": "以上为 2026-09-14 环节三比赛期间下发的原始容器地址（challenges_r3.json 快照），平台每次 reset 后会重新下发新地址；比赛后期该地址已失效（分析文档记录的续命地址为 nc 47.93.212.239 20511，同样会变）。2026-09-28 复测：原地址 TCP 可连上但**立刻被关闭、零字节响应**（陈旧 NAT），确认原容器已销毁。",
+    "flag": "（未获取）——比赛期间未解出，禁止编造。**注意**：本题是 dynamic（容器）题，flag 每实例注入、平台只存 sha256（challenge_instance.game_flag_hash），原容器已销毁 ⇒ **原始 flag 明文不可追溯**。本目录下任何 flag 都是本地/复盘平台自己生成的，不得当作比赛 flag。",
+    "submit_ts": null
+  },
+  "_verification": {
+    "date": "2026-09-28",
+    "verdict": "✅ 环境可解，且已通过**复盘平台完整闭环**验证（平台生成 flag → 注入容器 → 打靶 → 提交判分 code=0）",
+    "fidelity_checks": {
+      "attachment_hash": "zip 名 d47ca8b37e58ebc1a4d2de680a7f3329 == 官方 file_url 哈希 ✅",
+      "zip_vs_disk": "zip 内 pwn md5 5e4df7215e2ca104b8db93cfd8490866 / libc.so.6 md5 5898fac5d2680d0d8fefdadd632b7188，与 attachments/ 完全一致 ✅",
+      "deploy_src": "deploy/src/* 与 attachments/* 逐字节一致 ✅",
+      "container_binary": "运行中容器 /app/pwn md5 == 附件 md5 ✅",
+      "glibc": "容器 ldd = Ubuntu GLIBC 2.31-0ubuntu9.17（满足 __free_hook 链前提）✅",
+      "script": "work/r3_pwn01/fidelity_check.py（可重跑）"
+    },
+    "exploit": {
+      "script": "work/r3_pwn01/pwn01_solve.py（HOST/PORT 参数化，成功 exit 0 并打印 [+] FLAG:）",
+      "report": "work/r3_pwn01/SOLVABILITY_pwn01.md",
+      "chain": "8 借(0x80) → 7 次 free 填满 tcache[0x90] → free C6 进 unsorted → 第二次 login 使其进 smallbin[9] → show(-9) 泄漏 libc → NULL 写 tcache ents[7] 最低字节 → 两次 malloc 得到 __free_hook-8 并写入 system → return_book(-9) 触发 free(libc+\"/bin/sh\") → shell → 读 /flag",
+      "primitive": "Borrow 的终止符用的是**陈旧 size 副本**（[rbp-0x2e]，signed short）⇒ 可在相对受控 chunk 的任意偏移写单个 0x00（0x166e/0x1672 存副本①、0x16d3/0x16d7 仅合法路径刷新、0x174b-0x175b 用陈旧副本写 0）",
+      "reproducibility": "两个目标各打 3 次，6/6 exit 0；负对照（打不通端口）exit 1 且不编 flag"
+    },
+    "platform_loop": {
+      "steps": "① 平台 POST /api/v1/challenges/<qid>/reset → code=0，下发 nc 127.0.0.1 44371 ② pwn01_solve.py 打真实容器（6.4s, exit 0）③ 读到平台生成的 flag ④ POST submit → **code=0 status=1「答案正确」** ⑤ stop",
+      "flag_observed": "flag{7ee50e1324c18812b5d322b827716e874e137c2027d5446ed25c5812ce2c24d2}（平台本次实例生成，**非比赛 flag**）",
+      "script": "work/pwn01_platform_loop.py（可重跑）"
+    },
+    "fixed_defect": {
+      "symptom": "平台侧启动靶机一律失败：'靶机启动失败，请联系管理员检查镜像和 Docker 服务'（容器 create/start 全 EXIT 0，但 inspect 显示 running=false，随即被清理）",
+      "root_cause": "**本镜像的缺陷**：平台以 `--cap-drop=ALL` 启动容器 ⇒ 没有 CAP_DAC_OVERRIDE ⇒ 无法原地覆盖 root 属主 0444 的 /flag；而 entrypoint 写了 `set -e`，写失败即退出 ⇒ 容器秒退。原来的 ENTRYPOINT 直接 exec socat（不写文件）所以没暴露。",
+      "fix": "deploy/entrypoint.sh 改为：先 `rm -f /flag` 再新建写入（unlink 只需目录写权限），去掉 `set -e`，全程失败不致命并回退到构建期占位 flag；deploy/Dockerfile 的 ENTRYPOINT 改为 /entrypoint.sh。",
+      "evidence": "work/verify_pwn01_image.py 以**平台同款参数**复现（--cap-drop=ALL 等）：修复前 running=false、修复后 running=true + 端口已发布 + 容器内 /flag == 注入值 + 利用脚本读到同一 flag",
+      "diagnostic_tool": "D:\\qwb_work\\shim\\docker.exe（Go 写的 docker shim：记录 argv/退出码并转发）——平台把 docker 的真实报错吞成了通用文案，靠 shim 才拿到现场命令与 running 状态"
+    }
+  }
+}

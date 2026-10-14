@@ -1,0 +1,62 @@
+# docker-compose.yml — 环节三 web02 「智能数据分析平台 + AI WAF」还原
+# 起法：
+#   cd timu/round3_1700/web02/deploy
+#   docker compose up -d --build
+#   # 对外入口： http://127.0.0.1:8092
+#
+# flag 真值来自下面的 FLAG 环境变量（app.py 启动时同步进 idap.flag）。
+# 比赛期间从平台上取到的真 flag 为 flag{1930275d-5db2-4cd0-adf2-e950621afc2d}，此处保留原值以便核对。
+
+# 显式工程名：多题目录都叫 deploy/，不写 name: 会用目录名当工程名，
+# 导致不同题的容器互相顶替（见 AGENTS §6.1.1）。
+name: qwb-r3-web02
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: r3web02-mysql
+    command:
+      - --default-authentication-plugin=mysql_native_password
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_general_ci
+      - --secure-file-priv=NULL          # 对齐实测：@@secure_file_priv 为 NULL，load_file 不通
+    environment:
+      MYSQL_ROOT_PASSWORD: root_pass_2026
+      MYSQL_DATABASE: idap
+      MYSQL_USER: idap
+      MYSQL_PASSWORD: idap_pass_2026
+    volumes:
+      - ./mysql/init.sql:/docker-entrypoint-initdb.d/01-init.sql:ro
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uidap", "-pidap_pass_2026"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+    networks: [idapnet]
+
+  web:
+    build: .
+    container_name: r3web02-web
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      DB_HOST: mysql
+      DB_PORT: "3306"
+      DB_USER: idap
+      DB_PASSWORD: idap_pass_2026
+      DB_NAME: idap
+      PORT: "5000"
+      FLAG: "flag{1930275d-5db2-4cd0-adf2-e950621afc2d}"
+      WAF_RATE_LIMIT: "600"        # 调成 8 可复现比赛期间的「高频即 429」
+    ports:
+      - "8092:5000"
+    networks: [idapnet]
+
+volumes:
+  mysql_data:
+
+networks:
+  idapnet:
+    driver: bridge

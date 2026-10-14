@@ -1,0 +1,7 @@
+# round2_1330 / misc01 — 参考解法依赖
+#
+# 仅使用 Python 3.8+ 标准库（argparse / base64 / re / zipfile / os / tempfile / sys），
+# 无需任何第三方包。
+#
+# 运行：
+#   python solve/solve.py --attach attachments/e4dccc50e240c6b0c34cf94db7d4e4b3.zip

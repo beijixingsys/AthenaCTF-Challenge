@@ -1,0 +1,16 @@
+/*! all.min.css — offline placeholder for Font Awesome (reconstruction) */
+.fas{display:inline-block;font-style:normal;font-variant:normal;text-rendering:auto;line-height:1}
+.fa-folder-open:before{content:"\1f4c2"}
+.fa-tools:before{content:"\1f527"}
+.fa-search:before{content:"\1f50d"}
+.fa-cloud-upload-alt:before{content:"\2601"}
+.fa-upload:before{content:"\2b06"}
+.fa-file-alt:before{content:"\1f4c4"}
+.fa-exchange-alt:before{content:"\21c4"}
+.fa-check:before{content:"\2714"}
+.fa-list:before{content:"\1f4cb"}
+.fa-file:before{content:"\1f4c4"}
+.fa-file-image:before{content:"\1f5bc"}
+.fa-file-archive:before{content:"\1f5dc"}
+.fa-download:before{content:"\2b07"}
+.fa-trash:before{content:"\1f5d1"}

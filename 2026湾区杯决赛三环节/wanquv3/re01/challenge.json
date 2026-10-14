@@ -1,0 +1,141 @@
+{
+  "question_id": "cRvMHaJuYM9lKdqI",
+  "title": "re01",
+  "score": 500,
+  "real_score": 500,
+  "file_url": "https://g.ichunqiu.com/terminator/production/match_question/202609/37feb6fb281a6397ef17b191b7d5b81d.zip",
+  "is_solved": true,
+  "category": "reverse",
+  "attributes": [
+    "reverse"
+  ],
+  "description": "Unlock the secrets",
+  "interactive": "false",
+  "capabilities": [
+    "reverse"
+  ],
+  "connection": [],
+  "extensions": {
+    "reverse": "reverse",
+    "attachment_provenance": {
+      "source_file_url": "https://g.ichunqiu.com/terminator/production/match_question/202609/37feb6fb281a6397ef17b191b7d5b81d.zip",
+      "source_hash": "37feb6fb281a6397ef17b191b7d5b81d",
+      "archived_files": [
+        "main"
+      ],
+      "note": "原件为 zip，已解包；归档内层文件与必要的派生件（详见本题目录 README §8）"
+    }
+  },
+  "_restore": {
+    "round": "round3_1700",
+    "source_of_truth": {
+      "platform_metadata": "D:\\2026\\湾区杯\\决赛\\challenges_r3.json (qid=cRvMHaJuYM9lKdqI)",
+      "submit_receipt": "D:\\2026\\湾区杯\\决赛\\work\\submit_results_live.json",
+      "reference_solver": "D:\\2026\\湾区杯\\决赛\\work\\r3_re01\\invert.py",
+      "supporting": [
+        "D:\\2026\\湾区杯\\决赛\\work\\r3_re01\\vm.py",
+        "D:\\2026\\湾区杯\\决赛\\work\\r3_re01\\vmrun.py",
+        "D:\\2026\\湾区杯\\决赛\\work\\r3_re01\\vmprog.bin",
+        "D:\\2026\\湾区杯\\决赛\\work\\r3_re01\\hook.c",
+        "D:\\2026\\湾区杯\\决赛\\work\\r3_re01\\hook2.c",
+        "D:\\2026\\湾区杯\\决赛\\work\\r3_re01\\xrefs.py",
+        "D:\\2026\\湾区杯\\决赛\\work\\r3_re01\\dl.py",
+        "D:\\2026\\湾区杯\\决赛\\work\\r3_re01\\dl.log"
+      ],
+      "record": "D:\\2026\\湾区杯\\决赛\\赛道二测试记录.md §〇.3（环节三 6/10 题 3000 分）"
+    },
+    "is_solved_note": "challenges_r3.json 快照中 is_solved=false（快照早于提交）；此处按真实结果写 true —— 提交回执 code=0 / pass=true，message=「恭喜您，回答正确」，flag 已由平台确认。",
+    "hint": "无 /hint",
+    "attachment": {
+      "zip": "re01.zip",
+      "zip_size": 166375,
+      "zip_md5": "ad0a1e391411717f90915ebff15ea4cc",
+      "inner": "main",
+      "inner_size": 375192,
+      "inner_md5": "06870cb9f9ab7ecab4721601ad6649c5",
+      "format": "ELF64 x86-64 PIE (Type DYN), dynamically linked, Rust, stripped",
+      "needed": [
+        "libgcc_s.so.1",
+        "libc.so.6"
+      ],
+      "interp": "/lib64/ld-linux-x86-64.so.2",
+      "note": "PT_LOAD 段满足 文件偏移 == 虚拟地址，故下文地址可直接用作文件偏移"
+    },
+    "key_addresses": {
+      "_start": "0x7950",
+      "main_area": "0x9db0",
+      "regfile_calloc_0x40": "0x8c60",
+      "reg_init_movaps_src": "0x49010",
+      "reg_init_movabs": "0x8cfa",
+      "vm_dispatcher": "0x8d1d",
+      "vm_opcode_jumptable": "0x492b0",
+      "vm_prog_ptr": "0x4ae07",
+      "vm_prog_len": "0x1101",
+      "target_const": "0x4bf08",
+      "target_len": "0x30",
+      "cmp_r12_0x30": "0x943d",
+      "memcmp_call": "0x9452",
+      "memcmp_got": "0x5bf48 (resolves to bcmp)",
+      "yes_str": "0x4bf3b",
+      "no_str": "0x4bf38"
+    },
+    "register_init_le": {
+      "r2": "0x00000000",
+      "r3": "0xaaaaaaaa",
+      "r4": "0xdec03713",
+      "r5": "0xefbeadde",
+      "r6": "0xcefaedfe",
+      "r7": "0x0df0adba",
+      "trap": "字节流是 1337c0de/deadbeef/feedface/baadf00d，必须按**小端 dword** 解释；误读成 0x1337c0de 等会静默失败"
+    },
+    "vm_prog_md5": "3bc0d26a85b45469ad7660faa2eb5d16",
+    "flag": "flag{9bc396fd-75fb-484c-b193-f3ae596e6317}",
+    "submit_time": "2026-09-14 17:17:58",
+    "completeness": "A",
+    "verified_on": {
+      "env": "docker + python:3.11-slim (Debian 13, glibc 2.41)",
+      "command": "docker run --rm -v \"<dir with main>:/w\" -w /w python:3.11-slim bash -c \"chmod +x ./main; printf '<INPUT>\\n' | ./main\"",
+      "ldd": [
+        "libgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1",
+        "libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6",
+        "/lib64/ld-linux-x86-64.so.2"
+      ],
+      "glibc_version": "2.41 (Debian GLIBC 2.41-12+deb13u4)",
+      "results": [
+        {
+          "input": "flag{9bc396fd-75fb-484c-b193-f3ae596e6317}",
+          "output": "yes",
+          "note": "正确 flag"
+        },
+        {
+          "input": "flag{00000000-0000-0000-0000-000000000000}",
+          "output": "no",
+          "note": "反向对照（UUID 全 0）"
+        },
+        {
+          "input": "50 字节全 A",
+          "output": "no",
+          "note": "反向对照（排除\"长度对就 yes\"）"
+        },
+        {
+          "input": "flag{9bc396fd-75fb-484c-b193-f3ae596e6318}（末位改 1 字符）",
+          "output": "no",
+          "note": "反向对照（排除误报）"
+        }
+      ],
+      "image_selection": {
+        "requirement": "该 ELF 要求 glibc >= 2.34",
+        "ubuntu:20.04": "glibc 2.31 -> 失败，报 GLIBC_2.33 / 2.32 / 2.34 not found（实测）",
+        "python:3.11-slim": "glibc 2.41 -> 实测可用（本次采用）",
+        "debian:bookworm-slim": "glibc 2.36 -> 满足 >=2.34（版本达标，未在本机实测）"
+      },
+      "not_usable": "本机 WSL 仅有 docker-desktop 发行版（musl），跑该 ELF 报 Error loading shared library libgcc_s.so.1 -> 必须走 Docker 的 glibc 镜像"
+    },
+    "script_selfchecks": [
+      "python solve/solve.py --bin attachments/main 退出码 0",
+      "自检1 forward(b'AAAAAAAA') == 4d513cab 35d5dece",
+      "自检2 invert(forward(x)) == x 往返",
+      "自检3 反演明文重新正演 == 二进制硬编码目标常量（48/48 字节逐字节相等）"
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "question_id": "eVn0vSPSZZxRDM0u",
+  "title": "re01",
+  "score": 500,
+  "real_score": 500,
+  "file_url": "https://g.ichunqiu.com/terminator/production/match_question/202609/6eeab1c52c58772a4a31eabca90e6b36.zip",
+  "is_solved": true,
+  "category": "reverse",
+  "attributes": ["reverse"],
+  "description": "（平台 description 为空）",
+  "interactive": "false",
+  "capabilities": ["reverse"],
+  "connection": [],
+  "extensions": {"reverse": "reverse"},
+
+  "_restore": {
+    "round": "round2_1330",
+    "source_of_truth": {
+      "platform_metadata": "D:\\2026\\湾区杯\\决赛\\challenges_live.json (qid=eVn0vSPSZZxRDM0u)",
+      "submit_receipt": "D:\\2026\\湾区杯\\决赛\\work\\submit_results_live.json",
+      "writeup": "D:\\2026\\湾区杯\\决赛\\work\\_wp_dump\\re01.txt",
+      "reference_solver": "D:\\2026\\湾区杯\\决赛\\work\\re01\\re01_solve.py"
+    },
+    "is_solved_note": "比赛期抓取的 challenges_live.json 快照中 is_solved=false（快照早于提交）；此处按真实结果写 true —— 提交回执 code=0 / pass=true，message=「恭喜您，回答正确」，flag 已由平台确认。",
+    "platform_description_empty": true,
+    "no_hint": true,
+    "embedded_teaser_string": "Please gdb me,I wish you a pleasant time.",
+    "attachment": {
+      "zip": "6eeab1c52c58772a4a31eabca90e6b36.zip",
+      "zip_size": 3336,
+      "zip_md5": "ada0084b70e027de4bc45c5f716d1895",
+      "inner": "gdb_me",
+      "inner_size": 16160,
+      "inner_md5": "0a2e80acee912696ea763c455546f292",
+      "format": "ELF64 x86-64 PIE (Type DYN), dynamically linked, not stripped",
+      "toolchain": "GCC 13.3.0"
+    },
+    "flag": "flag{71a76145-c14f-4e0b-80ac-58035510fade}",
+    "submit_time": "2026-09-14 13:34:32",
+    "completeness": "A"
+  }
+}

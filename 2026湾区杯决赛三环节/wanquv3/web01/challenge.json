@@ -1,0 +1,35 @@
+{
+  "question_id": "S6EzBC1_cqRrInj8",
+  "title": "web01",
+  "score": 500,
+  "real_score": 500,
+  "file_url": "https://g.ichunqiu.com/terminator/production/match_question/202609/770d893cff1aa4dd3a643c02110de369.zip",
+  "is_solved": false,
+  "category": "web",
+  "attributes": [
+    "web"
+  ],
+  "description": "某部门采用现在nodejs流行的http主流开发框架express来快速搭建了一个简易的web服务，现在网站还处于内部测试阶段，某些接口只能特定的ip访问。（本题下发后，请通过http访问相应的ip和port，例如 nc ip port ，改为http://ip:port/）",
+  "interactive": "true",
+  "capabilities": [
+    "web"
+  ],
+  "connection": {
+    "docker_url": "http://8.147.132.32:25211",
+    "docker_ip": "8.147.132.32",
+    "docker_port": 25211
+  },
+  "extensions": {
+    "web": "web",
+    "attachment_provenance": {
+      "source_file_url": "https://g.ichunqiu.com/terminator/production/match_question/202609/770d893cff1aa4dd3a643c02110de369.zip",
+      "source_hash": "770d893cff1aa4dd3a643c02110de369",
+      "archived_files": [
+        "index.js"
+      ],
+      "note": "原件为 zip，已解包；归档内层文件与必要的派生件（详见本题目录 README §8）"
+    }
+  },
+  "flag": "",
+  "unsolved_reason": "容器 DNS 未 provision：120+ 个 *.baidu.com × 30 端口 × 1200 次探测全 NXDOMAIN（连 www.baidu.com 都不解析）。该题唯一可行路径是 DNS，故该实例不可解。"
+}

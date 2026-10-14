@@ -1,0 +1,20 @@
+{
+  "question_id": "KQ6JKe9T37LEAz_z",
+  "title": "web03",
+  "score": 500,
+  "real_score": 500,
+  "file_url": "",
+  "is_solved": true,
+  "category": "web",
+  "attributes": ["web"],
+  "description": "i like escape源码在/www.zip（本题下发后，请通过http访问相应的ip和port，例如 nc ip port ，改为http://ip:port/）",
+  "interactive": "true",
+  "capabilities": ["web"],
+  "connection": {
+    "docker_url": "nc 123.56.12.16 26753",
+    "docker_ip": "123.56.12.16",
+    "docker_port": 26753
+  },
+  "extensions": {"web": "web"},
+  "flag": "flag{7386fc3b-9ec1-428c-aff3-483317221af0}"
+}

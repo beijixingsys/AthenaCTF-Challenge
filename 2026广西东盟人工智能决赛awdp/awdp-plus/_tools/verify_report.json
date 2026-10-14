@@ -1,0 +1,290 @@
+[
+  {
+    "name": "shift_handoff_inspector",
+    "exploit_before": true,
+    "sla_before": true,
+    "exploit_after": true,
+    "sla_after": true,
+    "applied": [
+      "handoff_operations.py",
+      "handoff_timeline.py"
+    ],
+    "sla_before_out": [
+      "[OK] liveness   liveness ok",
+      "[OK] functional asset+ticket create/list ok",
+      "[OK] flag       FLAG leaked through cross-asset export (vulnerable)  [informational]"
+    ],
+    "exploit_before_out": [
+      "[OK] liveness   liveness ok",
+      "[OK] functional asset+ticket create/list ok",
+      "[OK] flag       FLAG leaked through cross-asset export (vulnerable)"
+    ],
+    "sla_after_out": [
+      "[OK] liveness   liveness ok",
+      "[OK] functional asset+ticket create/list ok",
+      "[OK] flag       no flag leaked (status=200 decision=handoff.digest)  [informational]"
+    ],
+    "exploit_after_out": [
+      "[OK] liveness   liveness ok",
+      "[OK] functional asset+ticket create/list ok",
+      "[OK] flag       no flag leaked (status=200 decision=handoff.digest)"
+    ]
+  },
+  {
+    "name": "last_mile_dispatch_board",
+    "exploit_before": true,
+    "sla_before": true,
+    "exploit_after": true,
+    "sla_after": true,
+    "applied": [
+      "dispatch_state_machine.py",
+      "dispatch_routebook.py"
+    ],
+    "sla_before_out": [
+      "[OK] liveness   liveness ok",
+      "[OK] functional order create+board ok",
+      "[OK] flag       FLAG leaked through cross-order redirect (vulnerable)  [informational]"
+    ],
+    "exploit_before_out": [
+      "[OK] liveness   liveness ok",
+      "[OK] functional order create+board ok",
+      "[OK] flag       FLAG leaked through cross-order redirect (vulnerable)"
+    ],
+    "sla_after_out": [
+      "[OK] liveness   liveness ok",
+      "[OK] functional order create+board ok",
+      "[OK] flag       no flag leaked (status=200 decision=dispatch.redirected)  [informational]"
+    ],
+    "exploit_after_out": [
+      "[OK] liveness   liveness ok",
+      "[OK] functional order create+board ok",
+      "[OK] flag       no flag leaked (status=200 decision=dispatch.redirected)"
+    ]
+  },
+  {
+    "name": "invoice_reconciliation_desk",
+    "exploit_before": true,
+    "sla_before": true,
+    "exploit_after": true,
+    "sla_after": true,
+    "applied": [
+      "finance-ledger/settlement_ledger.py",
+      "finance-ledger/settlement_checkpoint.py",
+      "settlement_ledger.py",
+      "settlement_checkpoint.py"
+    ],
+    "sla_before_out": [
+      "[OK] liveness   liveness ok",
+      "[OK] functional po+invoice+batch ok",
+      "[OK] flag       FLAG leaked via unsigned batch release (vulnerable)  [informational]"
+    ],
+    "exploit_before_out": [
+      "[OK] liveness   liveness ok",
+      "[OK] functional po+invoice+batch ok",
+      "[OK] flag       FLAG leaked via unsigned batch release (vulnerable)"
+    ],
+    "sla_after_out": [
+      "[OK] liveness   liveness ok",
+      "[OK] functional po+invoice+batch ok",
+      "[OK] flag       no flag leaked (draft status=200)  [informational]"
+    ],
+    "exploit_after_out": [
+      "[OK] liveness   liveness ok",
+      "[OK] functional po+invoice+batch ok",
+      "[OK] flag       no flag leaked (draft status=200)"
+    ]
+  },
+  {
+    "name": "merchant_assortment_studio",
+    "exploit_before": true,
+    "sla_before": true,
+    "exploit_after": true,
+    "sla_after": true,
+    "applied": [
+      "catalogue-review/assortment_engine.py",
+      "catalogue-review/assortment_review.py",
+      "assortment_engine.py",
+      "assortment_review.py"
+    ],
+    "sla_before_out": [
+      "[OK] liveness   liveness ok",
+      "[OK] functional evidence+session ok",
+      "[OK] flag       FLAG leaked through partner catalogue review (vulnerable)  [informational]"
+    ],
+    "exploit_before_out": [
+      "[OK] liveness   liveness ok",
+      "[OK] functional evidence+session ok",
+      "[OK] flag       FLAG leaked through partner catalogue review (vulnerable)"
+    ],
+    "sla_after_out": [
+      "[OK] liveness   liveness ok",
+      "[OK] functional evidence+session ok",
+      "[OK] flag       no flag leaked (status=200 decision=assortment.recommendation)  [informational]"
+    ],
+    "exploit_after_out": [
+      "[OK] liveness   liveness ok",
+      "[OK] functional evidence+session ok",
+      "[OK] flag       no flag leaked (status=200 decision=assortment.recommendation)"
+    ]
+  },
+  {
+    "name": "onboarding_memory_steward",
+    "exploit_before": true,
+    "sla_before": true,
+    "exploit_after": true,
+    "sla_after": true,
+    "applied": [
+      "onboarding_guard.py",
+      "onboarding_memory_store.py",
+      "packet_timeline.py"
+    ],
+    "sla_before_out": [
+      "[OK] liveness   liveness ok",
+      "[OK] functional memory card + packet listing ok",
+      "[OK] flag       FLAG leaked through packet composition (vulnerable)  [informational]"
+    ],
+    "exploit_before_out": [
+      "[OK] liveness   liveness ok",
+      "[OK] functional memory card + packet listing ok",
+      "[OK] flag       FLAG leaked through packet composition (vulnerable)"
+    ],
+    "sla_after_out": [
+      "[OK] liveness   liveness ok",
+      "[OK] functional memory card + packet listing ok",
+      "[OK] flag       no flag leaked (status=200 decision=onboarding.summary)  [informational]"
+    ],
+    "exploit_after_out": [
+      "[OK] liveness   liveness ok",
+      "[OK] functional memory card + packet listing ok",
+      "[OK] flag       no flag leaked (status=200 decision=onboarding.summary)"
+    ]
+  },
+  {
+    "name": "signal_triage_console",
+    "exploit_before": true,
+    "sla_before": true,
+    "exploit_after": true,
+    "sla_after": true,
+    "applied": [
+      "signal_provenance.py",
+      "provenance_frame.py"
+    ],
+    "sla_before_out": [
+      "[OK] liveness   liveness ok",
+      "[OK] functional connector+alert ok",
+      "[OK] flag       FLAG leaked through forged attestation dispatch (vulnerable)  [informational]"
+    ],
+    "exploit_before_out": [
+      "[OK] liveness   liveness ok",
+      "[OK] functional connector+alert ok",
+      "[OK] flag       FLAG leaked through forged attestation dispatch (vulnerable)"
+    ],
+    "sla_after_out": [
+      "[OK] liveness   liveness ok",
+      "[OK] functional connector+alert ok",
+      "[OK] flag       alert create failed: 404 {'ok': False, 'error': 'connector not found'}  [informational]"
+    ],
+    "exploit_after_out": [
+      "[OK] liveness   liveness ok",
+      "[OK] functional connector+alert ok",
+      "[OK] flag       alert create failed: 404 {'ok': False, 'error': 'connector not found'}"
+    ]
+  },
+  {
+    "name": "release_control_tower",
+    "exploit_before": true,
+    "sla_before": true,
+    "exploit_after": true,
+    "sla_after": true,
+    "applied": [
+      "original_preflight_control.py",
+      "preflight_control.py",
+      "original_preflight_rail.py",
+      "preflight_rail.py"
+    ],
+    "sla_before_out": [
+      "[OK] liveness   liveness ok",
+      "[OK] functional manifest + signed tool registry ok",
+      "[OK] flag       RCE via extension preflight leaked FLAG (vulnerable)  [informational]"
+    ],
+    "exploit_before_out": [
+      "[OK] liveness   liveness ok",
+      "[OK] functional manifest + signed tool registry ok",
+      "[OK] flag       RCE via extension preflight leaked FLAG (vulnerable)"
+    ],
+    "sla_after_out": [
+      "[OK] liveness   liveness ok",
+      "[OK] functional manifest + signed tool registry ok",
+      "[OK] flag       no flag leaked (preflight status=200 decision=release.planned)  [informational]"
+    ],
+    "exploit_after_out": [
+      "[OK] liveness   liveness ok",
+      "[OK] functional manifest + signed tool registry ok",
+      "[OK] flag       no flag leaked (preflight status=200 decision=release.planned)"
+    ]
+  },
+  {
+    "name": "runbook_sentinel",
+    "exploit_before": true,
+    "sla_before": true,
+    "exploit_after": true,
+    "sla_after": true,
+    "applied": [
+      "original_probe_sentinel.py",
+      "probe_sentinel.py",
+      "original_probe_journal.py",
+      "probe_journal.py"
+    ],
+    "sla_before_out": [
+      "[OK] liveness   liveness ok",
+      "[OK] functional runbook create + directory ok",
+      "[OK] flag       FLAG leaked through SSRF redirect (vulnerable)  [informational]"
+    ],
+    "exploit_before_out": [
+      "[OK] liveness   liveness ok",
+      "[OK] functional runbook create + directory ok",
+      "[OK] flag       FLAG leaked through SSRF redirect (vulnerable)"
+    ],
+    "sla_after_out": [
+      "[OK] liveness   liveness ok",
+      "[OK] functional runbook create + directory ok",
+      "[OK] flag       no flag leaked (status=200 decision=None)  [informational]"
+    ],
+    "exploit_after_out": [
+      "[OK] liveness   liveness ok",
+      "[OK] functional runbook create + directory ok",
+      "[OK] flag       no flag leaked (status=200 decision=None)"
+    ]
+  },
+  {
+    "name": "ez_Render",
+    "exploit_before": true,
+    "sla_before": true,
+    "exploit_after": true,
+    "sla_after": true,
+    "applied": [
+      "original_app.py",
+      "app.py"
+    ],
+    "sla_before_out": [
+      "[OK] liveness   liveness ok",
+      "[OK] functional jinja2 template preview ok",
+      "[OK] flag       SSTI leaked FLAG (vulnerable)  [informational]"
+    ],
+    "exploit_before_out": [
+      "[OK] liveness   liveness ok",
+      "[OK] functional jinja2 template preview ok",
+      "[OK] flag       SSTI leaked FLAG (vulnerable)"
+    ],
+    "sla_after_out": [
+      "[OK] liveness   liveness ok",
+      "[OK] functional jinja2 template preview ok",
+      "[OK] flag       no flag leaked (status=401 rendered='None')  [informational]"
+    ],
+    "exploit_after_out": [
+      "[OK] liveness   liveness ok",
+      "[OK] functional jinja2 template preview ok",
+      "[OK] flag       no flag leaked (status=401 rendered='None')"
+    ]
+  }
+]

@@ -1,0 +1,77 @@
+# web03 —— 单容器网络命名空间复现
+#
+#   apache  : 外层 Apache + mod_php，docroot /var/www/html，对外发布 8093->80
+#   nginx   : 内部 127.0.0.1:8080（“本地图库”），加入 apache 的 netns
+#   ftp     : 内部 127.0.0.1:21（匿名可登录，chroot /srv/ftp），加入 apache 的 netns
+#
+# 关键：nginx 与 ftp 都用 network_mode: "service:apache"，所以三者共享同一个
+# network namespace —— 在 apache 容器里 127.0.0.1:80 / :8080 / :21 全部可用。
+name: web03
+
+services:
+  apache:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: web03-apache:latest
+    container_name: web03-apache
+    ports:
+      - "8093:80"
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O /dev/null http://127.0.0.1/ || exit 1"]
+      interval: 5s
+      timeout: 3s
+      retries: 24
+      start_period: 5s
+
+  nginx:
+    image: web03-apache:latest
+    pull_policy: never
+    container_name: web03-nginx
+    network_mode: "service:apache"
+    depends_on:
+      apache:
+        condition: service_healthy
+    command: ["nginx", "-g", "daemon off;"]
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/html:/usr/share/nginx/html:ro
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O /dev/null http://127.0.0.1:8080/index.html || exit 1"]
+      interval: 5s
+      timeout: 3s
+      retries: 24
+      start_period: 5s
+
+  ftp:
+    image: web03-apache:latest
+    pull_policy: never
+    container_name: web03-ftp
+    network_mode: "service:apache"
+    depends_on:
+      apache:
+        condition: service_healthy
+    command:
+      - python3
+      - -c
+      - |
+        import os
+        from pyftpdlib.authorizers import DummyAuthorizer
+        from pyftpdlib.handlers import FTPHandler
+        from pyftpdlib.servers import FTPServer
+        auth = DummyAuthorizer()
+        auth.add_anonymous('/srv/ftp', perm='elradfmwMT')
+        handler = FTPHandler
+        handler.authorizer = auth
+        handler.passive_ports = range(60000, 60020)
+        handler.masquerade_address = '127.0.0.1'
+        server = FTPServer(('0.0.0.0', 21), handler)
+        os.setgid(1000)
+        os.setuid(1000)
+        server.serve_forever()
+    healthcheck:
+      test: ["CMD", "python3", "-c", "import ftplib;f=ftplib.FTP();f.connect('127.0.0.1',21,5);f.login();assert 'pub' in f.nlst();f.quit()"]
+      interval: 5s
+      timeout: 5s
+      retries: 24
+      start_period: 5s

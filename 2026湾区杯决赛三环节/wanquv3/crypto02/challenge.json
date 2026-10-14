@@ -1,0 +1,66 @@
+{
+  "question_id": "CrpMu5aVJdYVf9zK",
+  "title": "crypto02",
+  "score": 500,
+  "real_score": 500,
+  "file_url": "https://g.ichunqiu.com/terminator/production/match_question/202609/35f9525c2b502783cf462a7f61b0a42e.zip",
+  "is_solved": true,
+  "category": "crypto",
+  "attributes": [
+    "crypto"
+  ],
+  "description": "",
+  "interactive": "false",
+  "capabilities": [
+    "crypto"
+  ],
+  "connection": [],
+  "extensions": {
+    "crypto": "crypto",
+    "attachment_provenance": {
+      "source_file_url": "https://g.ichunqiu.com/terminator/production/match_question/202609/35f9525c2b502783cf462a7f61b0a42e.zip",
+      "source_hash": "35f9525c2b502783cf462a7f61b0a42e",
+      "archived_files": [
+        "crypto02.zip",
+        "task.py"
+      ],
+      "note": "原件为 zip，已解包；归档内层文件与必要的派生件（详见本题目录 README §8）"
+    }
+  },
+  "_restore_notes": {
+    "round": "round3_1700",
+    "platform_name": "crypto02",
+    "is_solved_source": "无人值守 Supervisor 账本 D:/qwb_work/agent/ledger.jsonl 第 88 行 submit: code=0 message=恭喜您，回答正确（2026-09-14 17:01:41）；worker_done status=solved 见第 86 行。平台快照 challenges_r3.json 抓取于解题前，其值为 false。注意本题提交不在 work/submit_results_live.json 中（该文件只收录会话侧提交）",
+    "flag": "flag{886769b5-2301-4c37-bb73-4480b4eab682}",
+    "attachment_local": "attachments/crypto02.zip",
+    "attachment_size": 1207,
+    "attachment_md5": "f6e278d8b57051867cc99e8d5f70597d",
+    "attachment_sha256": "dd5281828fcbb677b24ecd5b95bee907e0fac8240fc14d2ba394de618b8aa362",
+    "inner_files": [
+      {
+        "name": "task.py",
+        "size": 1914,
+        "md5": "7d3d7b38b57752b69fcf3905ebc2a9fb",
+        "role": "出题脚本本体（题目即此文件）"
+      }
+    ],
+    "description_note": "平台 description 为空字符串；题面即 task.py（含末尾注释里的 gift / key1 / cipher）",
+    "key_params": {
+      "gift": 64698960125130294692475067384121553664,
+      "gift_hex": "30ac910404c93071400c104003007300",
+      "key1": "74aeb356c6eb74f364cd316497c0f714",
+      "cipher_hex": "36bf9bb19314829aa4c2afd04cadbb350e7c3e8c7cf05e646c7e58c752ca5aab16be2072f6506ce093fc290e938ed3d6",
+      "key0_recovered": "bafc950d1dc9ba75da1e56da4b187b6a",
+      "distinct_key1_nibbles": 14,
+      "candidate_key0_count": 43128,
+      "plaintext_len": 42,
+      "pkcs7_pad": "0x06 x 6",
+      "decrypt_formula": "P = Dec_{key0,IV=key1}(Enc_{key1,IV=key0}(C))"
+    },
+    "rebuilt_files": [
+      "deploy/src/secret.py（仅含 flag 的重建件；附件未下发 secret.py）",
+      "deploy/README.md"
+    ],
+    "reproducibility_note": "task.py 使用未播种的 os.urandom/random.shuffle，每次执行天然生成新实例（新 key0/key1/gift/cipher，flag 不变）；已实测对新实例闭环解出同一 flag"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "qwb-r3-web01-ssrf",
+  "version": "1.0.0",
+  "private": true,
+  "description": "round3 web01 - Express SSRF hostname whitelist bypass via DNS",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "internal": "node internal.js"
+  },
+  "dependencies": {
+    "axios": "0.27.2",
+    "cookie": "0.5.0",
+    "express": "4.18.2"
+  }
+}

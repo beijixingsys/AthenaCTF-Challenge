@@ -1,0 +1,12 @@
+name: qwb-r3-pwn01
+
+services:
+  pwn01:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: timu/round3-pwn01:latest
+    container_name: round3_pwn01
+    ports:
+      - "9997:9999"
+    restart: unless-stopped

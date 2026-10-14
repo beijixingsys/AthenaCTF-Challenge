@@ -1,0 +1,3 @@
+﻿# 环节三 pwn01 参考脚本只依赖 Python 3 标准库（socket / struct / re / time）。
+# 原始比赛期脚本用 pwntools： pwntools>=4.9
+

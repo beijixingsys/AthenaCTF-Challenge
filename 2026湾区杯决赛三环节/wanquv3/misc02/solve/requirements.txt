@@ -1,0 +1,12 @@
+# round3_1700 / misc02 — 参考解法依赖
+#
+# 需要 scapy 读 pcapng（其余为 Python 3.8+ 标准库：argparse/base64/io/os/re/shutil/subprocess/sys/zipfile）。
+# 安装：
+#   pip install -r solve/requirements.txt
+#
+# 【重要】第 5 步（ZIP 内 ZipCrypto 已知明文攻击）需要外部工具 bkcrack，不是 Python 包：
+#   Windows（本机已装）：D:\2026\湾区杯\决赛\v2\tools\bin\bkcrack.exe   (bkcrack 1.8.1)
+#   Linux：apt install bkcrack  或 源码 cmake 编译（https://github.com/kimci86/bkcrack）
+#   solve.py 会自动在 PATH 与该默认路径中查找，也可用 --bkcrack <path> 显式指定。
+#   若找不到 bkcrack，脚本仍会完成第 1~4 步并打印恢复密钥所需的确切命令（returncode=3）。
+scapy>=2.5.0

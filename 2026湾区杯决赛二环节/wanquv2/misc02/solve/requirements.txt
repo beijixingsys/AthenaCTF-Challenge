@@ -1,0 +1,8 @@
+# round2_1330 / misc02 — 参考解法依赖
+#
+# 需要 scapy 读 pcapng（其余为 Python 3.8+ 标准库：argparse/base64/gzip/re/zipfile）。
+# 安装：
+#   pip install -r solve/requirements.txt
+#
+# 本机实测环境：Python 3.13 + scapy（已装）。
+scapy>=2.5.0

@@ -1,0 +1,41 @@
+# round3_1700 / misc02 — ZipCrypto 已知明文攻击（bkcrack）赛后复议完整记录
+# 生成时间：2026-09-14 环节三之后（赛后复议）
+# 工具：bkcrack 1.8.1 - 2025-10-25
+#   路径：D:\2026\湾区杯\决赛\v2\tools\bin\bkcrack.exe
+#   （该二进制 2026-09-14 15:13 已存在于本机；比赛期间未盘点工具箱，误判"本机没有 bkcrack"而放弃本题）
+#
+# ---- 输入（由 solve/solve.py 第 1~4 步产出）-------------------------------
+# out/secret.zip  30634 bytes  sha256=739bc447089e888e56a3f4fce43973580c09abe27eaaacd41abf2015da6f7aaa
+#   entry: secret.png  method=0 (stored)  flag_bits=0x0001 (ZipCrypto)  comp=30480  uncomp=30468  crc=ddd7e367
+#   local header: 504b0304140001000000cf76535b67e3d7dd10770000047700000a0000007365637265742e706e67
+#   已知明文：PNG 头 16 字节（8 字节签名 + IHDR 长度 0x0000000D + "IHDR"）
+#             = 89504E470D0A1A0A0000000D49484452
+#   明文偏移：-o / -x 的 0 表示"跳过 12 字节 ZipCrypto 加密头后的第一个字节"
+#
+# ---- 攻击命令 -------------------------------------------------------------
+$ bkcrack -C out\secret.zip -c secret.png -x 0 89504E470D0A1A0A0000000D49484452
+bkcrack 1.8.1 - 2025-10-25
+[03:03:48] Attack on 760344 Z values at index 6
+Keys: d1c9002e fddfca1e 86c3fee5
+Found a solution. Stopping.
+You may resume the attack with the option: --continue-attack 76323
+[03:04:28] Keys
+d1c9002e fddfca1e 86c3fee5
+# 攻击耗时约 40 秒（solve.py 端到端 51.8 秒含 pcap 解析与两次 base 解码）
+#
+# ---- 解密命令 -------------------------------------------------------------
+$ bkcrack -C out\secret.zip -c secret.png -k d1c9002e fddfca1e 86c3fee5 -d out\secret_dec.png
+bkcrack 1.8.1 - 2025-10-25
+[03:04:33] Writing deciphered data out\secret_dec.png
+Wrote deciphered data (not compressed).
+#
+# ---- 产物 ----------------------------------------------------------------
+# out/secret_dec.png  30468 bytes  sha256=196bfe80aafbbdefb94cf360784085911bb8d216fe7ea1b8cda11e3a08487ef1
+#   合法 PNG：magic=89504e470d0a1a0a，块序 IHDR(13) / sRGB(1) / IDAT×4 / IEND(0)
+#   图像尺寸 1460x228，mode=RGBA，alpha 恒为 255，151 种颜色（终端截图样式的抗锯齿文字）
+#   全字节扫描：无 flag{...} 字面量
+#
+# ---- 结论 ----------------------------------------------------------------
+# 解码链 100% 打通（DNS 隧道 → 标准 Base32 → 自定义 Base58 → 真 ZIP → ZipCrypto 已知明文 → PNG），
+# 但**未取得可验证的 flag**：最终明文是一张终端窗口截图，画面为 ASCII-art 大字横幅 "DayDreaming"，
+# 不含 flag{...} 形式字符串；比赛平台已关闭（code=203），无法提交验证任何候选。

@@ -1,0 +1,20 @@
+{
+  "question_id": "znIYXp9PSqJDvX43",
+  "title": "web01",
+  "score": 500,
+  "real_score": 500,
+  "file_url": "",
+  "is_solved": true,
+  "category": "web",
+  "attributes": ["web"],
+  "description": "小明在服务器上直接编辑文件时，不小心意外退出环境。",
+  "interactive": "true",
+  "capabilities": ["web"],
+  "connection": {
+    "docker_url": "https://eci-2ze5h3h8k8ghqoet0une.cloudeci1.ichunqiu.com:80",
+    "docker_ip": "eci-2ze5h3h8k8ghqoet0une.cloudeci1.ichunqiu.com",
+    "docker_port": 80
+  },
+  "extensions": {"web": "web"},
+  "flag": "flag{6e0771cc-4c99-4eb8-abcf-1a826648ff84}"
+}

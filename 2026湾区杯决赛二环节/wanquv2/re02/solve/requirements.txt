@@ -1,0 +1,10 @@
+# re02 (round2_1330) 参考解法无第三方依赖。
+# Python 3.8+ 标准库即可（argparse / os / re / subprocess / sys）。
+#
+# 可选依赖（仅用于交叉校验三段常量数组）：
+#   - binutils 提供的 `objdump`（Linux: binutils / Windows: TDM-GCC / MinGW-W64 自带）
+#     * 不装也能跑：加 `--no-crosscheck`。
+#
+# 实机闭环验证（--verify）：
+#   - Windows：直接执行 attachments/re01.exe（原生，本工程已实测通过）。
+#   - Linux/macOS：需 `wine`（未实测）；或用 deploy/Dockerfile 起容器后 `nc 127.0.0.1 9999`。

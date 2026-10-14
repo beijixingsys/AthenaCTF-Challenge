@@ -1,0 +1,9 @@
+[Unit]
+Description=Normal Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/sleep infinity
+
+[Install]
+WantedBy=multi-user.target

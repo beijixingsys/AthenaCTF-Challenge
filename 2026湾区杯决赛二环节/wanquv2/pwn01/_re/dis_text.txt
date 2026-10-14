@@ -1,0 +1,275 @@
+﻿00401130: f30f1efa               endbr64 
+00401134: 31ed                   xor ebp, ebp
+00401136: 4989d1                 mov r9, rdx
+00401139: 5e                     pop rsi
+0040113a: 4889e2                 mov rdx, rsp
+0040113d: 4883e4f0               and rsp, 0xfffffffffffffff0
+00401141: 50                     push rax
+00401142: 54                     push rsp
+00401143: 4531c0                 xor r8d, r8d
+00401146: 31c9                   xor ecx, ecx
+00401148: 48c7c7f5134000         mov rdi, 0x4013f5
+0040114f: ff159b2e0000           call qword ptr [rip + 0x2e9b]
+00401155: f4                     hlt 
+00401156: 662e0f1f840000000000   nop word ptr cs:[rax + rax]
+00401160: f30f1efa               endbr64 
+00401164: c3                     ret 
+00401165: 662e0f1f840000000000   nop word ptr cs:[rax + rax]
+0040116f: 90                     nop 
+00401170: b868404000             mov eax, 0x404068
+00401175: 483d68404000           cmp rax, 0x404068
+0040117b: 7413                   je 0x401190
+0040117d: b800000000             mov eax, 0
+00401182: 4885c0                 test rax, rax
+00401185: 7409                   je 0x401190
+00401187: bf68404000             mov edi, 0x404068
+0040118c: ffe0                   jmp rax
+0040118e: 6690                   nop 
+00401190: c3                     ret 
+00401191: 66662e0f1f840000000000 nop word ptr cs:[rax + rax]
+0040119c: 0f1f4000               nop dword ptr [rax]
+004011a0: be68404000             mov esi, 0x404068
+004011a5: 4881ee68404000         sub rsi, 0x404068
+004011ac: 4889f0                 mov rax, rsi
+004011af: 48c1ee3f               shr rsi, 0x3f
+004011b3: 48c1f803               sar rax, 3
+004011b7: 4801c6                 add rsi, rax
+004011ba: 48d1fe                 sar rsi, 1
+004011bd: 7411                   je 0x4011d0
+004011bf: b800000000             mov eax, 0
+004011c4: 4885c0                 test rax, rax
+004011c7: 7407                   je 0x4011d0
+004011c9: bf68404000             mov edi, 0x404068
+004011ce: ffe0                   jmp rax
+004011d0: c3                     ret 
+004011d1: 66662e0f1f840000000000 nop word ptr cs:[rax + rax]
+004011dc: 0f1f4000               nop dword ptr [rax]
+004011e0: f30f1efa               endbr64 
+004011e4: 803dbd2e000000         cmp byte ptr [rip + 0x2ebd], 0
+004011eb: 7513                   jne 0x401200
+004011ed: 55                     push rbp
+004011ee: 4889e5                 mov rbp, rsp
+004011f1: e87affffff             call 0x401170
+004011f6: c605ab2e000001         mov byte ptr [rip + 0x2eab], 1
+004011fd: 5d                     pop rbp
+004011fe: c3                     ret 
+004011ff: 90                     nop 
+00401200: c3                     ret 
+00401201: 66662e0f1f840000000000 nop word ptr cs:[rax + rax]
+0040120c: 0f1f4000               nop dword ptr [rax]
+00401210: f30f1efa               endbr64 
+00401214: eb8a                   jmp 0x4011a0
+00401216: f30f1efa               endbr64 
+0040121a: 55                     push rbp
+0040121b: 4889e5                 mov rbp, rsp
+0040121e: 488b057b2e0000         mov rax, qword ptr [rip + 0x2e7b]
+00401225: be00000000             mov esi, 0
+0040122a: 4889c7                 mov rdi, rax
+0040122d: e8aefeffff             call 0x4010e0
+00401232: 488b05572e0000         mov rax, qword ptr [rip + 0x2e57]
+00401239: be00000000             mov esi, 0
+0040123e: 4889c7                 mov rdi, rax
+00401241: e89afeffff             call 0x4010e0
+00401246: 488b05332e0000         mov rax, qword ptr [rip + 0x2e33]
+0040124d: be00000000             mov esi, 0
+00401252: 4889c7                 mov rdi, rax
+00401255: e886feffff             call 0x4010e0
+0040125a: bf78000000             mov edi, 0x78
+0040125f: e8acfeffff             call 0x401110
+00401264: 41b900000000           mov r9d, 0
+0040126a: 41b8ffffffff           mov r8d, 0xffffffff
+00401270: b922000000             mov ecx, 0x22
+00401275: ba07000000             mov edx, 7
+0040127a: be00100000             mov esi, 0x1000
+0040127f: bf00000000             mov edi, 0
+00401284: e847feffff             call 0x4010d0
+00401289: 488905302e0000         mov qword ptr [rip + 0x2e30], rax
+00401290: 488b05292e0000         mov rax, qword ptr [rip + 0x2e29]
+00401297: 4889c6                 mov rsi, rax
+0040129a: 488d05670d0000         lea rax, [rip + 0xd67]
+004012a1: 4889c7                 mov rdi, rax
+004012a4: b800000000             mov eax, 0
+004012a9: e842feffff             call 0x4010f0
+004012ae: 90                     nop 
+004012af: 5d                     pop rbp
+004012b0: c3                     ret 
+004012b1: 89ca                   mov edx, ecx
+004012b3: c3                     ret 
+004012b4: f30f1efa               endbr64 
+004012b8: 55                     push rbp
+004012b9: 4889e5                 mov rbp, rsp
+004012bc: 488d05500d0000         lea rax, [rip + 0xd50]
+004012c3: 4889c7                 mov rdi, rax
+004012c6: e8e5fdffff             call 0x4010b0
+004012cb: 488d055e0d0000         lea rax, [rip + 0xd5e]
+004012d2: 4889c7                 mov rdi, rax
+004012d5: e8d6fdffff             call 0x4010b0
+004012da: 488d05830d0000         lea rax, [rip + 0xd83]
+004012e1: 4889c7                 mov rdi, rax
+004012e4: e8c7fdffff             call 0x4010b0
+004012e9: 488d058e0d0000         lea rax, [rip + 0xd8e]
+004012f0: 4889c7                 mov rdi, rax
+004012f3: b800000000             mov eax, 0
+004012f8: e8f3fdffff             call 0x4010f0
+004012fd: baf0000000             mov edx, 0xf0
+00401302: be00000000             mov esi, 0
+00401307: 488d05d22d0000         lea rax, [rip + 0x2dd2]
+0040130e: 4889c7                 mov rdi, rax
+00401311: e8eafdffff             call 0x401100
+00401316: ba30000000             mov edx, 0x30
+0040131b: 488d05be2d0000         lea rax, [rip + 0x2dbe]
+00401322: 4889c6                 mov rsi, rax
+00401325: bf00000000             mov edi, 0
+0040132a: e8f1fdffff             call 0x401120
+0040132f: 90                     nop 
+00401330: 5d                     pop rbp
+00401331: c3                     ret 
+00401332: 0f05                   syscall 
+00401334: c3                     ret 
+00401335: f30f1efa               endbr64 
+00401339: 55                     push rbp
+0040133a: 4889e5                 mov rbp, rsp
+0040133d: 488d053d0d0000         lea rax, [rip + 0xd3d]
+00401344: 4889c7                 mov rdi, rax
+00401347: e864fdffff             call 0x4010b0
+0040134c: 488d052b0d0000         lea rax, [rip + 0xd2b]
+00401353: 4889c7                 mov rdi, rax
+00401356: b800000000             mov eax, 0
+0040135b: e890fdffff             call 0x4010f0
+00401360: 488b05592d0000         mov rax, qword ptr [rip + 0x2d59]
+00401367: ba03000000             mov edx, 3
+0040136c: 4889c6                 mov rsi, rax
+0040136f: bf00000000             mov edi, 0
+00401374: e8a7fdffff             call 0x401120
+00401379: 488d05180d0000         lea rax, [rip + 0xd18]
+00401380: 4889c7                 mov rdi, rax
+00401383: e828fdffff             call 0x4010b0
+00401388: 488d05360d0000         lea rax, [rip + 0xd36]
+0040138f: 4889c7                 mov rdi, rax
+00401392: b800000000             mov eax, 0
+00401397: e854fdffff             call 0x4010f0
+0040139c: ba30000000             mov edx, 0x30
+004013a1: 488d05382d0000         lea rax, [rip + 0x2d38]
+004013a8: 4889c6                 mov rsi, rax
+004013ab: bf01000000             mov edi, 1
+004013b0: e80bfdffff             call 0x4010c0
+004013b5: 488b05042d0000         mov rax, qword ptr [rip + 0x2d04]
+004013bc: 4889c2                 mov rdx, rax
+004013bf: b800000000             mov eax, 0
+004013c4: ffd2                   call rdx
+004013c6: 90                     nop 
+004013c7: 5d                     pop rbp
+004013c8: c3                     ret 
+004013c9: 5f                     pop rdi
+004013ca: 5e                     pop rsi
+004013cb: c3                     ret 
+004013cc: f30f1efa               endbr64 
+004013d0: 55                     push rbp
+004013d1: 4889e5                 mov rbp, rsp
+004013d4: 488d05fd0c0000         lea rax, [rip + 0xcfd]
+004013db: 4889c7                 mov rdi, rax
+004013de: e8cdfcffff             call 0x4010b0
+004013e3: 488d05160d0000         lea rax, [rip + 0xd16]
+004013ea: 4889c7                 mov rdi, rax
+004013ed: e8befcffff             call 0x4010b0
+004013f2: 90                     nop 
+004013f3: 5d                     pop rbp
+004013f4: c3                     ret 
+004013f5: f30f1efa               endbr64 
+004013f9: 55                     push rbp
+004013fa: 4889e5                 mov rbp, rsp
+004013fd: b800000000             mov eax, 0
+00401402: e80ffeffff             call 0x401216
+00401407: b800000000             mov eax, 0
+0040140c: e8a3feffff             call 0x4012b4
+00401411: b800000000             mov eax, 0
+00401416: e81affffff             call 0x401335
+0040141b: b800000000             mov eax, 0
+00401420: 5d                     pop rbp
+00401421: c3                     ret 
+
+=== .plt / .plt.sec ===
+00401020: ff35e22f0000           push qword ptr [rip + 0x2fe2]
+00401026: f2ff25e32f0000         bnd jmp qword ptr [rip + 0x2fe3]
+0040102d: 0f1f00                 nop dword ptr [rax]
+00401030: f30f1efa               endbr64 
+00401034: 6800000000             push 0
+00401039: f2e9e1ffffff           bnd jmp 0x401020
+0040103f: 90                     nop 
+00401040: f30f1efa               endbr64 
+00401044: 6801000000             push 1
+00401049: f2e9d1ffffff           bnd jmp 0x401020
+0040104f: 90                     nop 
+00401050: f30f1efa               endbr64 
+00401054: 6802000000             push 2
+00401059: f2e9c1ffffff           bnd jmp 0x401020
+0040105f: 90                     nop 
+00401060: f30f1efa               endbr64 
+00401064: 6803000000             push 3
+00401069: f2e9b1ffffff           bnd jmp 0x401020
+0040106f: 90                     nop 
+00401070: f30f1efa               endbr64 
+00401074: 6804000000             push 4
+00401079: f2e9a1ffffff           bnd jmp 0x401020
+0040107f: 90                     nop 
+00401080: f30f1efa               endbr64 
+00401084: 6805000000             push 5
+00401089: f2e991ffffff           bnd jmp 0x401020
+0040108f: 90                     nop 
+00401090: f30f1efa               endbr64 
+00401094: 6806000000             push 6
+00401099: f2e981ffffff           bnd jmp 0x401020
+0040109f: 90                     nop 
+004010a0: f30f1efa               endbr64 
+004010a4: 6807000000             push 7
+004010a9: f2e971ffffff           bnd jmp 0x401020
+004010af: 90                     nop 
+004010b0: f30f1efa               endbr64 
+004010b4: f2ff255d2f0000         bnd jmp qword ptr [rip + 0x2f5d]
+004010bb: 0f1f440000             nop dword ptr [rax + rax]
+004010c0: f30f1efa               endbr64 
+004010c4: f2ff25552f0000         bnd jmp qword ptr [rip + 0x2f55]
+004010cb: 0f1f440000             nop dword ptr [rax + rax]
+004010d0: f30f1efa               endbr64 
+004010d4: f2ff254d2f0000         bnd jmp qword ptr [rip + 0x2f4d]
+004010db: 0f1f440000             nop dword ptr [rax + rax]
+004010e0: f30f1efa               endbr64 
+004010e4: f2ff25452f0000         bnd jmp qword ptr [rip + 0x2f45]
+004010eb: 0f1f440000             nop dword ptr [rax + rax]
+004010f0: f30f1efa               endbr64 
+004010f4: f2ff253d2f0000         bnd jmp qword ptr [rip + 0x2f3d]
+004010fb: 0f1f440000             nop dword ptr [rax + rax]
+00401100: f30f1efa               endbr64 
+00401104: f2ff25352f0000         bnd jmp qword ptr [rip + 0x2f35]
+0040110b: 0f1f440000             nop dword ptr [rax + rax]
+00401110: f30f1efa               endbr64 
+00401114: f2ff252d2f0000         bnd jmp qword ptr [rip + 0x2f2d]
+0040111b: 0f1f440000             nop dword ptr [rax + rax]
+00401120: f30f1efa               endbr64 
+00401124: f2ff25252f0000         bnd jmp qword ptr [rip + 0x2f25]
+0040112b: 0f1f440000             nop dword ptr [rax + rax]
+
+=== .init / .fini ===
+00401000: f30f1efa               endbr64 
+00401004: 4883ec08               sub rsp, 8
+00401008: 488b05e92f0000         mov rax, qword ptr [rip + 0x2fe9]
+0040100f: 4885c0                 test rax, rax
+00401012: 7402                   je 0x401016
+00401014: ffd0                   call rax
+00401016: 4883c408               add rsp, 8
+0040101a: c3                     ret 
+00401424: f30f1efa               endbr64 
+00401428: 4883ec08               sub rsp, 8
+0040142c: 4883c408               add rsp, 8
+00401430: c3                     ret 
+
+=== .rodata dump ===
+ 0x402008  b'gift: %p.'
+ 0x402013  b'Welcome to baby shellcode.'
+ 0x402030  b"Don't make it too hard. It's just a baby-level-pwn!"
+ 0x402064  b'Input your name to start!'
+ 0x402081  b'Input your shellcode!'
+ 0x402098  b'The player start to play the shellcode game.'
+ 0x4020c5  b'His name is: '
+ 0x4020d8  b'Something are hidden in the program.'
+ 0x402100  b'What are they used for? Maybe just useless.'

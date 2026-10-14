@@ -1,0 +1,43 @@
+{
+  "question_id": "n6sTYSB71GlMDKLH",
+  "title": "re02",
+  "score": 500,
+  "real_score": 500,
+  "file_url": "https://g.ichunqiu.com/terminator/production/match_question/202609/ca44d8df29800162c10323766980d9cf.zip",
+  "is_solved": true,
+  "category": "reverse",
+  "attributes": ["reverse"],
+  "description": "（平台 description 为空）",
+  "interactive": "false",
+  "capabilities": ["reverse"],
+  "connection": [],
+  "extensions": {"reverse": "reverse"},
+
+  "_restore": {
+    "round": "round2_1330",
+    "source_of_truth": {
+      "platform_metadata": "D:\\2026\\湾区杯\\决赛\\challenges_live.json (qid=n6sTYSB71GlMDKLH)",
+      "submit_receipt": "D:\\2026\\湾区杯\\决赛\\work\\submit_results_live.json",
+      "writeup": "D:\\2026\\湾区杯\\决赛\\work\\_wp_dump\\re02.txt",
+      "reference_solver": "D:\\2026\\湾区杯\\决赛\\work\\re02\\re02_solve.py"
+    },
+    "is_solved_note": "challenges_live.json 快照中 is_solved=false（快照早于提交）；此处按真实结果写 true —— 提交回执 code=0 / pass=true，message=「恭喜您，回答正确」。",
+    "platform_description_empty": true,
+    "no_hint": true,
+    "attachment": {
+      "zip": "ca44d8df29800162c10323766980d9cf.zip",
+      "zip_size": 7555,
+      "zip_md5": "95ed08661037ee5dc47c2f37ddd4f032",
+      "inner": "re01.exe",
+      "inner_size": 16896,
+      "inner_md5": "1b80d8086f3a46b1adb7cfde10ac18df",
+      "format": "PE64 (pei-x86-64), no packer, no anti-debug, no symbols",
+      "toolchain": "MinGW-W64 / GCC 8.1.0, imports KERNEL32.dll + msvcrt.dll"
+    },
+    "naming_trap": "本题平台名为 re02，但附件文件名为 re01.exe（与上一题 re01 的 gdb_me 错位）。这是出题人的命名干扰，属真实事实，归档保持原文件名。",
+    "flag": "flag{0fa830e7-b699-4513-8e01-51f35b0f3293}",
+    "submit_time": "2026-09-14 13:34:39",
+    "completeness": "A",
+    "local_end_to_end_verified": "python solve/solve.py --verify attachments/re01.exe 在本机原生执行 PE 得到「请输入 flag: 成功！」，退出码 0"
+  }
+}

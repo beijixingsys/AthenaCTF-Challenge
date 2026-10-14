@@ -1,0 +1,54 @@
+{
+  "question_id": "B1zTXwTwwdInRsG9",
+  "title": "pwn01",
+  "score": 500,
+  "real_score": 500,
+  "file_url": "https://g.ichunqiu.com/terminator/production/match_question/202609/a97150c30a82dcc40a7ca47e83d68a4b.zip",
+  "is_solved": true,
+  "category": "pwn",
+  "attributes": [
+    "pwn"
+  ],
+  "description": "（平台 description 为空）",
+  "interactive": "true",
+  "capabilities": [
+    "pwn"
+  ],
+  "connection": {
+    "docker_url": "nc 60.205.230.76 32851",
+    "docker_ip": "60.205.230.76",
+    "docker_port": 32851
+  },
+  "extensions": {
+    "pwn": "pwn",
+    "attachment_provenance": {
+      "expected_file_url_hash": "a97150c30a82dcc40a7ca47e83d68a4b",
+      "archived_file": "attachments/a97150c30a82dcc40a7ca47e83d68a4b.zip",
+      "archived_file_md5": "d855dd65232db8767c50d3ee552c97b9",
+      "archived_file_size": 3106,
+      "extracted_attachment": "attachments/attachment",
+      "extracted_attachment_md5": "965629d1892bd50784b766eebc3a6179",
+      "extracted_attachment_size": 16544,
+      "mismatch": false,
+      "dual_source_verified": true,
+      "dual_source_paths": [
+        "D:\\qwb_work\\agent\\B1zTXwTwwdInRsG9_pwn01\\attachments\\a97150c30a82dcc40a7ca47e83d68a4b.zip",
+        "D:\\qwb_work\\sub_pwn\\pwn01\\a97150c30a82dcc40a7ca47e83d68a4b.zip"
+      ],
+      "corrected_misattribution": {
+        "earlier_claim": "本轮官方附件未落盘 / 归档的 8880B attachment 属本轮",
+        "verified_facts": "本轮官方附件 a97150c3…zip 确已落盘（两处副本 md5 一致）；其内 attachment 为 16544B（md5 965629d1892bd50784b766eebc3a6179），与本轮形态（3 字节 shellcode + 栈迁移）吻合。",
+        "misattributed_material": "work\\pwn01\\eda65fcbecd33639dceddc550837230c.zip（839650B；内含 8880B attachment + libc-2.31.so）属 2026-09-10 接入测试轮 pwn01（qid fKz1CMNvcesOvti_），其 pop rdi;ret = 0x400783（未对齐），是 buf[0x50]+read(0,0x100) 的 ret2libc 题。已移入 attachments/testround_0910/ 作为同族参考件。",
+        "runtime_abi_note": "本轮二进制要求 GLIBC_2.34（.gnu.version_r 仅含 GLIBC_2.2.5 / GLIBC_2.34）；testround_0910/libc-2.31.so 不是它的运行时。deploy/ 因此使用 ubuntu:22.04（glibc 2.35）。"
+      }
+    }
+  },
+  "_notes": {
+    "connection_warning": "以上为 2026-09-14 比赛期间的原始容器地址（challenges_live.json 快照），平台每次 reset 后会重新下发新地址，复现请以 agent show 的 connection.docker_url 为准。",
+    "attachment_status": "本轮官方附件已原样归档：attachments/a97150c30a82dcc40a7ca47e83d68a4b.zip（3106B）→ attachments/attachment（16544B, md5 965629d1892bd50784b766eebc3a6179）。README §3/§4/§5 与 solve/solve.py 均已按此二进制重写并在本地重建容器实测跑通。",
+    "flag": "flag{0f7af5a5-8674-42f2-b25f-620cb36c0efc}",
+    "flag_evidence": "work\\submit_results_live.json 中 qid B1zTXwTwwdInRsG9 的记录：code=0, message=恭喜您，回答正确, pass=true",
+    "submit_ts": "2026-09-14 13:55:20",
+    "verification_note": "本地容器跑通只证明利用链能读取容器内 /flag；flag 与原题一致的依据是上述平台提交回执（两者逐字相符）。"
+  }
+}

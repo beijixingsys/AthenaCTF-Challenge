@@ -1,0 +1,23 @@
+{
+  "question_id": "SNdmyaqEfKnrv3mD",
+  "title": "misc01",
+  "score": 500,
+  "real_score": 500,
+  "file_url": "https://g.ichunqiu.com/terminator/production/match_question/202609/e4dccc50e240c6b0c34cf94db7d4e4b3.zip",
+  "is_solved": true,
+  "solved_number": 0,
+  "category": "misc",
+  "attributes": ["misc"],
+  "description": "某服务器被入侵，请分析日志并回答：1. 攻击者使用的SSH用户名和IP2. 植入的恶意服务名称3. 泄露机密文件时使用的DNS域名提交形式：flag{SSH用户名_IP_恶意服务名称(不包括后缀)_DNS域名(固定部分)}",
+  "interactive": "false",
+  "capabilities": ["misc"],
+  "connection": [],
+  "extensions": {"misc": "misc"},
+  "_reproduction": {
+    "round": "round2_1330",
+    "local_attachment": "attachments/e4dccc50e240c6b0c34cf94db7d4e4b3.zip",
+    "recovered_flag": "flag{attacker_192.168.42.77_hidden_backdoor_data.leak.ev}",
+    "submit_evidence": "D:\\2026\\湾区杯\\决赛\\work\\submit_results_live.json (ts=2026-09-14 13:33:12, code=0, message=恭喜您，回答正确)",
+    "fidelity": "A"
+  }
+}

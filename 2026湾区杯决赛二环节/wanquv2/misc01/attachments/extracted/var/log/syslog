@@ -1,0 +1,512 @@
+Jun 15 03:46:57 server sshd[1000+i]: Started Daily apt upgrade
+Jun 15 03:57:43 server dbus[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 02:07:11 server sshd[1000+i]: System hostname changed to server-prod
+Jun 15 03:01:56 server kernel[1000+i]: Started Authorization Manager
+Jun 15 03:59:05 server dbus[1000+i]: Started Rotate log files
+Jun 15 03:09:19 server kernel[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 03:01:26 server dbus[1000+i]: Started Rotate log files
+Jun 15 02:47:01 server dbus[1000+i]: Started Authorization Manager
+Jun 15 03:06:20 server dbus[1000+i]: Started Authorization Manager
+Jun 15 03:25:04 server rsyslogd[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 03:26:04 server network[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 02:26:17 server kernel[1000+i]: Started Clean php session files
+Jun 15 02:29:09 server rsyslogd[1000+i]: Started Authorization Manager
+Jun 15 03:27:43 server kernel[1000+i]: Started Daily apt upgrade
+Jun 15 02:14:28 server network[1000+i]: Started Authorization Manager
+Jun 15 03:43:20 server cron[1000+i]: Started Daily apt upgrade
+Jun 15 03:52:59 server cron[1000+i]: Started Clean php session files
+Jun 15 03:49:17 server cron[1000+i]: Started Rotate log files
+Jun 15 02:12:54 server cron[1000+i]: Started Clean php session files
+Jun 15 02:08:46 server cron[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 03:33:48 server systemd[1000+i]: Started Daily apt upgrade
+Jun 15 03:46:12 server rsyslogd[1000+i]: Started Session 12 of user admin
+Jun 15 03:10:42 server sshd[1000+i]: System hostname changed to server-prod
+Jun 15 03:36:36 server network[1000+i]: Started Daily apt upgrade
+Jun 15 02:24:03 server kernel[1000+i]: Starting User Login Management
+Jun 15 02:02:23 server rsyslogd[1000+i]: System hostname changed to server-prod
+Jun 15 03:36:44 server rsyslogd[1000+i]: System hostname changed to server-prod
+Jun 15 03:54:48 server network[1000+i]: System hostname changed to server-prod
+Jun 15 03:28:27 server rsyslogd[1000+i]: Started Daily apt upgrade
+Jun 15 02:42:27 server dbus[1000+i]: Started Daily apt upgrade
+Jun 15 03:08:06 server sshd[1000+i]: Starting User Login Management
+Jun 15 03:12:10 server dbus[1000+i]: Started Session 12 of user admin
+Jun 15 02:27:26 server rsyslogd[1000+i]: Starting User Login Management
+Jun 15 03:13:52 server dbus[1000+i]: System hostname changed to server-prod
+Jun 15 02:58:49 server rsyslogd[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 02:05:22 server network[1000+i]: Starting User Login Management
+Jun 15 02:46:57 server sshd[1000+i]: Started Rotate log files
+Jun 15 03:48:25 server systemd[1000+i]: System hostname changed to server-prod
+Jun 15 03:52:38 server network[1000+i]: Started Rotate log files
+Jun 15 02:48:34 server network[1000+i]: Started Daily apt upgrade
+Jun 15 02:33:29 server dbus[1000+i]: Started Authorization Manager
+Jun 15 02:08:43 server cron[1000+i]: Started Rotate log files
+Jun 15 02:16:57 server network[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 03:29:59 server systemd[1000+i]: Started Clean php session files
+Jun 15 03:36:00 server systemd[1000+i]: Started Clean php session files
+Jun 15 03:49:22 server network[1000+i]: Started Session 12 of user admin
+Jun 15 02:34:18 server kernel[1000+i]: System hostname changed to server-prod
+Jun 15 03:43:36 server network[1000+i]: Started Daily apt upgrade
+Jun 15 03:26:56 server network[1000+i]: Started Authorization Manager
+Jun 15 02:46:02 server kernel[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 03:45:07 server network[1000+i]: Started Rotate log files
+Jun 15 03:07:24 server kernel[1000+i]: Started Rotate log files
+Jun 15 03:49:41 server sshd[1000+i]: Starting User Login Management
+Jun 15 03:40:33 server kernel[1000+i]: Started Rotate log files
+Jun 15 03:01:10 server cron[1000+i]: Started Authorization Manager
+Jun 15 02:54:45 server kernel[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 02:39:33 server rsyslogd[1000+i]: Started Session 12 of user admin
+Jun 15 03:38:10 server kernel[1000+i]: Started Daily apt upgrade
+Jun 15 03:34:42 server kernel[1000+i]: Starting User Login Management
+Jun 15 03:08:54 server dbus[1000+i]: System hostname changed to server-prod
+Jun 15 03:31:37 server sshd[1000+i]: System hostname changed to server-prod
+Jun 15 02:57:04 server dbus[1000+i]: Started Session 12 of user admin
+Jun 15 03:13:43 server systemd[1000+i]: Started Rotate log files
+Jun 15 02:30:49 server sshd[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 03:52:20 server kernel[1000+i]: Starting User Login Management
+Jun 15 02:43:31 server kernel[1000+i]: Started Rotate log files
+Jun 15 02:05:54 server kernel[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 03:22:59 server kernel[1000+i]: Started Clean php session files
+Jun 15 03:23:08 server systemd[1000+i]: System hostname changed to server-prod
+Jun 15 02:11:13 server systemd[1000+i]: Started Daily apt upgrade
+Jun 15 03:04:17 server rsyslogd[1000+i]: System hostname changed to server-prod
+Jun 15 03:17:55 server network[1000+i]: Started Authorization Manager
+Jun 15 02:42:35 server systemd[1000+i]: Starting User Login Management
+Jun 15 03:04:42 server cron[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 03:38:01 server dbus[1000+i]: Started Daily apt upgrade
+Jun 15 02:03:13 server rsyslogd[1000+i]: System hostname changed to server-prod
+Jun 15 02:09:21 server rsyslogd[1000+i]: Started Rotate log files
+Jun 15 03:34:06 server kernel[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 02:12:38 server systemd[1000+i]: Started Clean php session files
+Jun 15 03:31:24 server network[1000+i]: Started Authorization Manager
+Jun 15 02:01:47 server kernel[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 03:12:56 server kernel[1000+i]: Started Daily apt upgrade
+Jun 15 02:34:19 server sshd[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 03:02:29 server kernel[1000+i]: System hostname changed to server-prod
+Jun 15 02:05:23 server network[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 03:41:10 server kernel[1000+i]: System hostname changed to server-prod
+Jun 15 03:41:35 server dbus[1000+i]: System hostname changed to server-prod
+Jun 15 02:40:00 server kernel[1000+i]: System hostname changed to server-prod
+Jun 15 02:36:04 server dbus[1000+i]: Starting User Login Management
+Jun 15 03:19:02 server rsyslogd[1000+i]: Starting User Login Management
+Jun 15 02:00:21 server network[1000+i]: Started Daily apt upgrade
+Jun 15 03:36:10 server sshd[1000+i]: Started Daily apt upgrade
+Jun 15 03:53:14 server systemd[1000+i]: Started Authorization Manager
+Jun 15 03:46:45 server network[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 02:02:34 server cron[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 02:24:15 server kernel[1000+i]: Started Authorization Manager
+Jun 15 02:32:26 server systemd[1000+i]: Started Rotate log files
+Jun 15 02:18:43 server systemd[1000+i]: Started Rotate log files
+Jun 15 03:18:13 server network[1000+i]: Started Rotate log files
+Jun 15 02:08:40 server systemd[1000+i]: System hostname changed to server-prod
+Jun 15 03:35:51 server kernel[1000+i]: Starting User Login Management
+Jun 15 02:54:51 server systemd[1000+i]: Started Clean php session files
+Jun 15 03:37:32 server systemd[1000+i]: Started Clean php session files
+Jun 15 03:33:43 server cron[1000+i]: Starting User Login Management
+Jun 15 02:19:20 server dbus[1000+i]: Started Clean php session files
+Jun 15 03:23:42 server cron[1000+i]: Started Clean php session files
+Jun 15 02:02:10 server dbus[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 03:46:32 server kernel[1000+i]: Starting User Login Management
+Jun 15 03:07:03 server cron[1000+i]: System hostname changed to server-prod
+Jun 15 02:18:13 server cron[1000+i]: Started Daily apt upgrade
+Jun 15 03:48:12 server cron[1000+i]: Starting User Login Management
+Jun 15 03:58:02 server network[1000+i]: Started Session 12 of user admin
+Jun 15 02:24:42 server rsyslogd[1000+i]: Started Clean php session files
+Jun 15 02:23:34 server kernel[1000+i]: Started Rotate log files
+Jun 15 03:38:49 server network[1000+i]: Started Authorization Manager
+Jun 15 02:13:23 server cron[1000+i]: Starting User Login Management
+Jun 15 03:50:40 server rsyslogd[1000+i]: Starting User Login Management
+Jun 15 02:56:14 server network[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 02:24:43 server sshd[1000+i]: System hostname changed to server-prod
+Jun 15 03:13:53 server network[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 03:59:49 server dbus[1000+i]: Started Session 12 of user admin
+Jun 15 02:23:20 server rsyslogd[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 02:34:06 server cron[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 03:21:16 server dbus[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 02:16:15 server systemd[1000+i]: Started Session 12 of user admin
+Jun 15 02:17:18 server sshd[1000+i]: Started Session 12 of user admin
+Jun 15 02:28:46 server cron[1000+i]: Started Clean php session files
+Jun 15 02:02:18 server kernel[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 02:10:04 server rsyslogd[1000+i]: Started Session 12 of user admin
+Jun 15 02:58:36 server cron[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 03:01:54 server cron[1000+i]: Started Authorization Manager
+Jun 15 02:23:49 server network[1000+i]: Started Clean php session files
+Jun 15 02:52:10 server cron[1000+i]: Started Daily apt upgrade
+Jun 15 03:01:49 server network[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 03:22:31 server dbus[1000+i]: Started Session 12 of user admin
+Jun 15 02:27:04 server dbus[1000+i]: Started Daily apt upgrade
+Jun 15 02:07:04 server kernel[1000+i]: Started Clean php session files
+Jun 15 03:36:16 server kernel[1000+i]: Started Clean php session files
+Jun 15 03:03:31 server dbus[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 03:32:20 server systemd[1000+i]: Started Daily apt upgrade
+Jun 15 03:23:54 server dbus[1000+i]: Started Rotate log files
+Jun 15 02:23:29 server kernel[1000+i]: Started Session 12 of user admin
+Jun 15 03:26:38 server kernel[1000+i]: Started Session 12 of user admin
+Jun 15 02:15:48 server dbus[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 02:42:25 server sshd[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 02:06:02 server systemd[1000+i]: Started Clean php session files
+Jun 15 03:06:24 server rsyslogd[1000+i]: Starting User Login Management
+Jun 15 03:13:58 server sshd[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 03:49:29 server cron[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 03:36:33 server cron[1000+i]: Started Authorization Manager
+Jun 15 02:06:52 server dbus[1000+i]: Started Daily apt upgrade
+Jun 15 02:59:30 server rsyslogd[1000+i]: Starting User Login Management
+Jun 15 03:55:48 server rsyslogd[1000+i]: Started Session 12 of user admin
+Jun 15 02:28:55 server systemd[1000+i]: Started Session 12 of user admin
+Jun 15 03:23:49 server dbus[1000+i]: Started Clean php session files
+Jun 15 03:10:43 server cron[1000+i]: Started Session 12 of user admin
+Jun 15 02:42:57 server sshd[1000+i]: Started Daily apt upgrade
+Jun 15 03:42:53 server network[1000+i]: Started Daily apt upgrade
+Jun 15 02:40:14 server cron[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 02:30:41 server systemd[1000+i]: Started Daily apt upgrade
+Jun 15 03:16:46 server systemd[1000+i]: Started Authorization Manager
+Jun 15 02:41:18 server sshd[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 03:15:02 server systemd[1000+i]: Starting User Login Management
+Jun 15 02:32:13 server systemd[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 03:22:20 server cron[1000+i]: Started Session 12 of user admin
+Jun 15 02:27:18 server network[1000+i]: Started Rotate log files
+Jun 15 02:24:58 server cron[1000+i]: Starting User Login Management
+Jun 15 02:36:45 server dbus[1000+i]: System hostname changed to server-prod
+Jun 15 02:32:46 server kernel[1000+i]: System hostname changed to server-prod
+Jun 15 03:37:47 server systemd[1000+i]: Started Authorization Manager
+Jun 15 02:10:49 server kernel[1000+i]: Started Clean php session files
+Jun 15 03:51:17 server sshd[1000+i]: Started Rotate log files
+Jun 15 02:41:22 server network[1000+i]: Starting User Login Management
+Jun 15 03:01:13 server kernel[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 03:10:56 server cron[1000+i]: Started Clean php session files
+Jun 15 03:02:36 server cron[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 03:41:45 server systemd[1000+i]: Started Session 12 of user admin
+Jun 15 03:43:50 server kernel[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 02:57:13 server systemd[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 03:56:42 server network[1000+i]: Started Daily apt upgrade
+Jun 15 02:57:15 server network[1000+i]: Started Session 12 of user admin
+Jun 15 03:47:04 server network[1000+i]: Started Clean php session files
+Jun 15 02:51:37 server systemd[1000+i]: Starting User Login Management
+Jun 15 03:20:00 server dbus[1000+i]: System hostname changed to server-prod
+Jun 15 03:52:32 server network[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 03:34:15 server network[1000+i]: System hostname changed to server-prod
+Jun 15 02:49:45 server rsyslogd[1000+i]: Starting User Login Management
+Jun 15 03:07:38 server systemd[1000+i]: Started Clean php session files
+Jun 15 03:30:37 server sshd[1000+i]: Started Authorization Manager
+Jun 15 03:40:48 server network[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 02:44:26 server dbus[1000+i]: Started Clean php session files
+Jun 15 02:20:25 server sshd[1000+i]: Started Session 12 of user admin
+Jun 15 02:55:46 server systemd[1000+i]: System hostname changed to server-prod
+Jun 15 02:06:49 server dbus[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 02:28:46 server dbus[1000+i]: Started Session 12 of user admin
+Jun 15 03:24:51 server rsyslogd[1000+i]: Started Authorization Manager
+Jun 15 02:43:13 server systemd[1000+i]: Started Session 12 of user admin
+Jun 15 02:31:42 server sshd[1000+i]: System hostname changed to server-prod
+Jun 15 03:41:03 server dbus[1000+i]: Started Daily apt upgrade
+Jun 15 02:41:33 server rsyslogd[1000+i]: System hostname changed to server-prod
+Jun 15 02:00:49 server rsyslogd[1000+i]: Starting User Login Management
+Jun 15 02:32:40 server rsyslogd[1000+i]: System hostname changed to server-prod
+Jun 15 02:13:10 server cron[1000+i]: System hostname changed to server-prod
+Jun 15 03:32:47 server cron[1000+i]: Started Daily apt upgrade
+Jun 15 03:11:18 server sshd[1000+i]: Started Clean php session files
+Jun 15 03:47:35 server network[1000+i]: Started Session 12 of user admin
+Jun 15 02:16:02 server rsyslogd[1000+i]: System hostname changed to server-prod
+Jun 15 03:52:09 server sshd[1000+i]: Starting User Login Management
+Jun 15 02:20:46 server rsyslogd[1000+i]: Started Daily apt upgrade
+Jun 15 03:38:21 server kernel[1000+i]: Started Session 12 of user admin
+Jun 15 03:18:58 server cron[1000+i]: System hostname changed to server-prod
+Jun 15 02:05:01 server network[1000+i]: Started Rotate log files
+Jun 15 02:37:14 server rsyslogd[1000+i]: Started Authorization Manager
+Jun 15 02:13:09 server systemd[1000+i]: Started Daily apt upgrade
+Jun 15 02:00:21 server rsyslogd[1000+i]: Started Session 12 of user admin
+Jun 15 03:09:34 server sshd[1000+i]: Started Session 12 of user admin
+Jun 15 03:16:00 server rsyslogd[1000+i]: Started Rotate log files
+Jun 15 03:49:27 server dbus[1000+i]: Started Rotate log files
+Jun 15 02:42:42 server sshd[1000+i]: System hostname changed to server-prod
+Jun 15 03:14:51 server systemd[1000+i]: Started Rotate log files
+Jun 15 03:03:06 server rsyslogd[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 03:42:18 server kernel[1000+i]: Started Session 12 of user admin
+Jun 15 02:13:22 server cron[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 02:38:52 server dbus[1000+i]: Starting User Login Management
+Jun 15 03:56:00 server rsyslogd[1000+i]: Started Daily apt upgrade
+Jun 15 03:34:49 server network[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 02:27:31 server dbus[1000+i]: Started Session 12 of user admin
+Jun 15 02:43:56 server dbus[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 03:06:25 server kernel[1000+i]: Started Authorization Manager
+Jun 15 03:53:03 server dbus[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 02:51:29 server network[1000+i]: Started Daily apt upgrade
+Jun 15 03:55:44 server systemd[1000+i]: Started Rotate log files
+Jun 15 03:49:38 server rsyslogd[1000+i]: System hostname changed to server-prod
+Jun 15 02:02:41 server systemd[1000+i]: Started Clean php session files
+Jun 15 03:03:33 server dbus[1000+i]: Started Clean php session files
+Jun 15 02:10:22 server kernel[1000+i]: Starting User Login Management
+Jun 15 03:08:08 server systemd[1000+i]: Started Rotate log files
+Jun 15 03:39:56 server network[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 03:39:16 server network[1000+i]: Started Session 12 of user admin
+Jun 15 03:08:23 server network[1000+i]: Starting User Login Management
+Jun 15 03:17:22 server kernel[1000+i]: Started Clean php session files
+Jun 15 03:33:20 server systemd[1000+i]: Started Clean php session files
+Jun 15 03:26:50 server sshd[1000+i]: Started Rotate log files
+Jun 15 03:16:18 server dbus[1000+i]: Started Authorization Manager
+Jun 15 03:26:25 server systemd[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 03:32:14 server rsyslogd[1000+i]: Started Session 12 of user admin
+Jun 15 03:13:04 server systemd[1000+i]: Started Session 12 of user admin
+Jun 15 02:59:45 server sshd[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 02:40:46 server network[1000+i]: Starting User Login Management
+Jun 15 02:51:04 server dbus[1000+i]: Started Authorization Manager
+Jun 15 03:24:47 server rsyslogd[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 03:56:56 server sshd[1000+i]: Starting User Login Management
+Jun 15 03:46:05 server kernel[1000+i]: Started Authorization Manager
+Jun 15 03:47:41 server sshd[1000+i]: Started Session 12 of user admin
+Jun 15 03:39:50 server cron[1000+i]: Started Daily apt upgrade
+Jun 15 02:30:42 server cron[1000+i]: Started Authorization Manager
+Jun 15 03:27:41 server kernel[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 03:23:39 server kernel[1000+i]: Started Rotate log files
+Jun 15 03:10:42 server sshd[1000+i]: Started Clean php session files
+Jun 15 02:15:42 server dbus[1000+i]: Starting User Login Management
+Jun 15 02:51:19 server rsyslogd[1000+i]: Started Session 12 of user admin
+Jun 15 03:12:03 server network[1000+i]: Started Daily apt upgrade
+Jun 15 03:51:44 server network[1000+i]: Started Daily apt upgrade
+Jun 15 03:28:49 server systemd[1000+i]: Started Rotate log files
+Jun 15 03:27:21 server network[1000+i]: Started Rotate log files
+Jun 15 03:24:42 server systemd[1000+i]: Started Authorization Manager
+Jun 15 03:54:26 server cron[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 03:11:56 server cron[1000+i]: Started Rotate log files
+Jun 15 03:38:38 server rsyslogd[1000+i]: Starting User Login Management
+Jun 15 03:01:26 server systemd[1000+i]: Started Rotate log files
+Jun 15 03:04:04 server dbus[1000+i]: Started Session 12 of user admin
+Jun 15 02:02:02 server systemd[1000+i]: Started Rotate log files
+Jun 15 02:27:09 server kernel[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 02:07:29 server systemd[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 03:06:36 server kernel[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 03:25:08 server systemd[1000+i]: System hostname changed to server-prod
+Jun 15 03:52:28 server dbus[1000+i]: Started Clean php session files
+Jun 15 03:13:19 server dbus[1000+i]: Started Authorization Manager
+Jun 15 03:00:35 server kernel[1000+i]: Started Authorization Manager
+Jun 15 03:01:59 server network[1000+i]: Started Session 12 of user admin
+Jun 15 03:27:34 server rsyslogd[1000+i]: Started Authorization Manager
+Jun 15 03:44:34 server systemd[1000+i]: Started Daily apt upgrade
+Jun 15 02:54:18 server sshd[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 02:48:49 server cron[1000+i]: System hostname changed to server-prod
+Jun 15 03:25:00 server kernel[1000+i]: Started Authorization Manager
+Jun 15 03:12:28 server kernel[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 02:58:52 server rsyslogd[1000+i]: Started Clean php session files
+Jun 15 02:18:25 server network[1000+i]: Started Rotate log files
+Jun 15 02:17:35 server cron[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 02:34:04 server sshd[1000+i]: Started Session 12 of user admin
+Jun 15 03:22:28 server dbus[1000+i]: Started Rotate log files
+Jun 15 03:11:54 server cron[1000+i]: System hostname changed to server-prod
+Jun 15 02:26:47 server systemd[1000+i]: Starting User Login Management
+Jun 15 02:13:37 server kernel[1000+i]: System hostname changed to server-prod
+Jun 15 03:48:46 server rsyslogd[1000+i]: Started Daily apt upgrade
+Jun 15 03:09:47 server network[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 02:12:53 server dbus[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 03:05:59 server systemd[1000+i]: Started Daily apt upgrade
+Jun 15 02:41:30 server cron[1000+i]: Started Authorization Manager
+Jun 15 03:11:07 server dbus[1000+i]: Started Clean php session files
+Jun 15 02:03:23 server cron[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 03:47:49 server kernel[1000+i]: Starting User Login Management
+Jun 15 03:11:19 server cron[1000+i]: System hostname changed to server-prod
+Jun 15 02:21:10 server network[1000+i]: Starting User Login Management
+Jun 15 03:50:46 server network[1000+i]: Started Authorization Manager
+Jun 15 03:34:48 server kernel[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 03:37:50 server dbus[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 02:33:47 server sshd[1000+i]: Started Authorization Manager
+Jun 15 03:16:19 server rsyslogd[1000+i]: System hostname changed to server-prod
+Jun 15 02:39:53 server kernel[1000+i]: Started Clean php session files
+Jun 15 03:52:49 server systemd[1000+i]: Started Daily apt upgrade
+Jun 15 03:35:21 server rsyslogd[1000+i]: Started Authorization Manager
+Jun 15 03:18:31 server network[1000+i]: Starting User Login Management
+Jun 15 03:09:49 server network[1000+i]: Started Session 12 of user admin
+Jun 15 03:20:03 server systemd[1000+i]: Started Daily apt upgrade
+Jun 15 03:21:31 server systemd[1000+i]: Started Rotate log files
+Jun 15 02:10:49 server kernel[1000+i]: System hostname changed to server-prod
+Jun 15 03:24:36 server network[1000+i]: System hostname changed to server-prod
+Jun 15 02:42:31 server dbus[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 03:37:49 server network[1000+i]: Started Authorization Manager
+Jun 15 02:56:45 server kernel[1000+i]: Started Rotate log files
+Jun 15 03:00:54 server network[1000+i]: Started Rotate log files
+Jun 15 02:44:53 server sshd[1000+i]: Starting User Login Management
+Jun 15 03:06:44 server kernel[1000+i]: System hostname changed to server-prod
+Jun 15 03:45:36 server cron[1000+i]: Started Rotate log files
+Jun 15 03:43:52 server systemd[1000+i]: Started Session 12 of user admin
+Jun 15 03:04:17 server dbus[1000+i]: System hostname changed to server-prod
+Jun 15 02:41:11 server kernel[1000+i]: Started Clean php session files
+Jun 15 03:57:21 server cron[1000+i]: Starting User Login Management
+Jun 15 03:57:17 server kernel[1000+i]: Started Session 12 of user admin
+Jun 15 03:13:54 server kernel[1000+i]: Started Daily apt upgrade
+Jun 15 02:07:21 server rsyslogd[1000+i]: Started Authorization Manager
+Jun 15 03:52:48 server sshd[1000+i]: Started Authorization Manager
+Jun 15 02:58:31 server kernel[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 03:07:50 server sshd[1000+i]: Started Clean php session files
+Jun 15 03:02:27 server dbus[1000+i]: Started Rotate log files
+Jun 15 02:10:27 server cron[1000+i]: Started Session 12 of user admin
+Jun 15 02:49:50 server sshd[1000+i]: Started Daily apt upgrade
+Jun 15 03:55:24 server cron[1000+i]: Started Authorization Manager
+Jun 15 02:54:17 server cron[1000+i]: Started Daily apt upgrade
+Jun 15 03:02:24 server rsyslogd[1000+i]: System hostname changed to server-prod
+Jun 15 02:39:17 server rsyslogd[1000+i]: Started Rotate log files
+Jun 15 03:49:38 server systemd[1000+i]: Started Session 12 of user admin
+Jun 15 02:51:34 server network[1000+i]: Started Daily apt upgrade
+Jun 15 02:59:43 server sshd[1000+i]: Started Daily apt upgrade
+Jun 15 03:43:20 server kernel[1000+i]: Started Authorization Manager
+Jun 15 02:40:21 server sshd[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 02:42:23 server cron[1000+i]: Started Rotate log files
+Jun 15 02:58:02 server dbus[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 03:36:20 server rsyslogd[1000+i]: Started Clean php session files
+Jun 15 03:32:24 server systemd[1000+i]: Started Authorization Manager
+Jun 15 02:12:16 server network[1000+i]: Started Rotate log files
+Jun 15 02:10:55 server systemd[1000+i]: Started Session 12 of user admin
+Jun 15 02:18:33 server network[1000+i]: Started Clean php session files
+Jun 15 02:45:01 server cron[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 03:41:09 server sshd[1000+i]: Started Daily apt upgrade
+Jun 15 02:32:32 server rsyslogd[1000+i]: Starting User Login Management
+Jun 15 02:09:15 server cron[1000+i]: Started Session 12 of user admin
+Jun 15 03:52:26 server dbus[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 02:24:26 server sshd[1000+i]: Started Daily apt upgrade
+Jun 15 03:24:50 server kernel[1000+i]: Started Session 12 of user admin
+Jun 15 02:02:14 server cron[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 02:52:25 server kernel[1000+i]: Started Daily apt upgrade
+Jun 15 03:48:34 server cron[1000+i]: Started Session 12 of user admin
+Jun 15 03:50:08 server network[1000+i]: Started Session 12 of user admin
+Jun 15 02:20:30 server rsyslogd[1000+i]: Started Rotate log files
+Jun 15 03:12:52 server kernel[1000+i]: Started Authorization Manager
+Jun 15 02:32:54 server sshd[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 02:11:59 server rsyslogd[1000+i]: Starting User Login Management
+Jun 15 02:17:35 server rsyslogd[1000+i]: Starting User Login Management
+Jun 15 02:04:00 server kernel[1000+i]: Started Authorization Manager
+Jun 15 03:18:40 server cron[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 03:52:13 server kernel[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 03:41:11 server dbus[1000+i]: Started Daily apt upgrade
+Jun 15 03:02:07 server cron[1000+i]: Started Session 12 of user admin
+Jun 15 03:25:15 server kernel[1000+i]: Started Daily apt upgrade
+Jun 15 02:53:56 server rsyslogd[1000+i]: System hostname changed to server-prod
+Jun 15 02:45:13 server dbus[1000+i]: Started Clean php session files
+Jun 15 03:07:24 server cron[1000+i]: Started Clean php session files
+Jun 15 03:36:12 server cron[1000+i]: System hostname changed to server-prod
+Jun 15 02:54:17 server rsyslogd[1000+i]: Started Session 12 of user admin
+Jun 15 03:40:42 server rsyslogd[1000+i]: Started Rotate log files
+Jun 15 03:23:03 server sshd[1000+i]: Started Clean php session files
+Jun 15 03:17:56 server rsyslogd[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 02:35:57 server network[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 03:29:59 server systemd[1000+i]: Started Clean php session files
+Jun 15 02:24:36 server kernel[1000+i]: Started Rotate log files
+Jun 15 03:27:47 server network[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 03:44:42 server kernel[1000+i]: Starting User Login Management
+Jun 15 02:14:21 server cron[1000+i]: Started Daily apt upgrade
+Jun 15 03:45:16 server cron[1000+i]: Started Clean php session files
+Jun 15 02:48:16 server dbus[1000+i]: Started Authorization Manager
+Jun 15 03:22:57 server kernel[1000+i]: System hostname changed to server-prod
+Jun 15 03:04:06 server rsyslogd[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 03:19:24 server network[1000+i]: System hostname changed to server-prod
+Jun 15 03:50:08 server cron[1000+i]: System hostname changed to server-prod
+Jun 15 02:16:28 server network[1000+i]: Started Rotate log files
+Jun 15 03:51:36 server rsyslogd[1000+i]: Started Clean php session files
+Jun 15 03:26:24 server rsyslogd[1000+i]: System hostname changed to server-prod
+Jun 15 03:04:36 server cron[1000+i]: System hostname changed to server-prod
+Jun 15 03:02:32 server dbus[1000+i]: Started Rotate log files
+Jun 15 02:50:48 server network[1000+i]: Started Authorization Manager
+Jun 15 03:38:16 server rsyslogd[1000+i]: Starting User Login Management
+Jun 15 03:38:46 server sshd[1000+i]: Started Daily apt upgrade
+Jun 15 02:53:18 server rsyslogd[1000+i]: Started Daily apt upgrade
+Jun 15 02:20:26 server cron[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 02:01:48 server sshd[1000+i]: Started Rotate log files
+Jun 15 03:15:39 server kernel[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 03:39:16 server sshd[1000+i]: Started Rotate log files
+Jun 15 03:13:07 server systemd[1000+i]: Started Daily apt upgrade
+Jun 15 02:06:13 server cron[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 02:15:49 server network[1000+i]: Started Session 12 of user admin
+Jun 15 03:48:31 server systemd[1000+i]: Started Rotate log files
+Jun 15 02:50:39 server cron[1000+i]: System hostname changed to server-prod
+Jun 15 02:56:16 server kernel[1000+i]: Started Daily apt upgrade
+Jun 15 02:17:17 server sshd[1000+i]: Started Authorization Manager
+Jun 15 03:15:56 server dbus[1000+i]: Started Daily apt upgrade
+Jun 15 03:26:04 server cron[1000+i]: Started Rotate log files
+Jun 15 02:39:49 server network[1000+i]: Started Daily apt upgrade
+Jun 15 03:25:46 server network[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 02:26:40 server kernel[1000+i]: Started Rotate log files
+Jun 15 02:26:39 server sshd[1000+i]: System hostname changed to server-prod
+Jun 15 03:07:45 server systemd[1000+i]: Started Authorization Manager
+Jun 15 02:17:27 server sshd[1000+i]: Started Rotate log files
+Jun 15 02:12:53 server sshd[1000+i]: System hostname changed to server-prod
+Jun 15 02:15:57 server network[1000+i]: Started Clean php session files
+Jun 15 03:40:08 server sshd[1000+i]: Started Daily apt upgrade
+Jun 15 02:24:24 server kernel[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 02:53:48 server kernel[1000+i]: Starting User Login Management
+Jun 15 02:34:14 server kernel[1000+i]: Started Daily apt upgrade
+Jun 15 02:23:49 server rsyslogd[1000+i]: System hostname changed to server-prod
+Jun 15 03:39:05 server kernel[1000+i]: Started Daily apt upgrade
+Jun 15 03:07:17 server systemd[1000+i]: Started Rotate log files
+Jun 15 02:36:49 server dbus[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 02:45:31 server rsyslogd[1000+i]: System hostname changed to server-prod
+Jun 15 03:13:51 server kernel[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 03:52:51 server kernel[1000+i]: Started Clean php session files
+Jun 15 02:32:52 server systemd[1000+i]: Starting User Login Management
+Jun 15 02:30:23 server rsyslogd[1000+i]: Started Rotate log files
+Jun 15 03:57:30 server rsyslogd[1000+i]: Started Clean php session files
+Jun 15 03:45:35 server rsyslogd[1000+i]: System hostname changed to server-prod
+Jun 15 02:43:27 server rsyslogd[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 02:12:59 server sshd[1000+i]: System hostname changed to server-prod
+Jun 15 03:25:47 server systemd[1000+i]: Started Session 12 of user admin
+Jun 15 03:42:51 server cron[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 02:36:01 server network[1000+i]: Started Authorization Manager
+Jun 15 02:31:23 server cron[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 02:57:56 server dbus[1000+i]: Started Clean php session files
+Jun 15 02:50:50 server network[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 02:28:24 server rsyslogd[1000+i]: Started Session 12 of user admin
+Jun 15 02:25:33 server systemd[1000+i]: Started Clean php session files
+Jun 15 03:13:20 server dbus[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 02:29:15 server kernel[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 02:12:21 server rsyslogd[1000+i]: System hostname changed to server-prod
+Jun 15 02:59:48 server cron[1000+i]: Started Daily apt upgrade
+Jun 15 02:31:48 server network[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 02:10:49 server cron[1000+i]: Starting User Login Management
+Jun 15 03:56:47 server rsyslogd[1000+i]: Started Rotate log files
+Jun 15 03:25:00 server sshd[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 03:52:17 server cron[1000+i]: System hostname changed to server-prod
+Jun 15 02:53:38 server rsyslogd[1000+i]: Started Daily apt upgrade
+Jun 15 03:54:09 server cron[1000+i]: Started Authorization Manager
+Jun 15 02:10:53 server dbus[1000+i]: System hostname changed to server-prod
+Jun 15 03:06:36 server rsyslogd[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 02:43:55 server kernel[1000+i]: Started Authorization Manager
+Jun 15 02:03:40 server rsyslogd[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 02:31:51 server systemd[1000+i]: Started Session 12 of user admin
+Jun 15 02:01:57 server kernel[1000+i]: Started Session 12 of user admin
+Jun 15 02:17:39 server rsyslogd[1000+i]: Started Clean php session files
+Jun 15 03:37:41 server sshd[1000+i]: Started Session 12 of user admin
+Jun 15 02:41:41 server systemd[1000+i]: System hostname changed to server-prod
+Jun 15 03:27:07 server rsyslogd[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 02:22:07 server systemd[1000+i]: System hostname changed to server-prod
+Jun 15 03:22:08 server sshd[1000+i]: Starting Cleanup of Temporary Directories
+Jun 15 02:23:46 server rsyslogd[1000+i]: Started Session 12 of user admin
+Jun 15 03:40:43 server sshd[1000+i]: Started Session 12 of user admin
+Jun 15 03:47:15 server kernel[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 03:03:39 server systemd[1000+i]: Started Rotate log files
+Jun 15 02:02:23 server sshd[1000+i]: Started Authorization Manager
+Jun 15 02:44:50 server dbus[1000+i]: Starting User Login Management
+Jun 15 02:36:54 server network[1000+i]: Started Authorization Manager
+Jun 15 03:24:37 server systemd[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 02:00:29 server systemd[1000+i]: Started Clean php session files
+Jun 15 03:52:02 server kernel[1000+i]: Started Clean php session files
+Jun 15 02:14:34 server rsyslogd[1000+i]: Started Clean php session files
+Jun 15 03:57:50 server network[1000+i]: System hostname changed to server-prod
+Jun 15 03:09:30 server sshd[1000+i]: Started Clean php session files
+Jun 15 03:22:56 server sshd[1000+i]: System hostname changed to server-prod
+Jun 15 02:54:51 server network[1000+i]: Started Daily apt upgrade
+Jun 15 02:10:38 server rsyslogd[1000+i]: Starting User Login Management
+Jun 15 03:06:28 server systemd[1000+i]: Started Authorization Manager
+Jun 15 03:27:21 server systemd[1000+i]: Starting User Login Management
+Jun 15 03:59:29 server sshd[1000+i]: Started Rotate log files
+Jun 15 02:41:33 server systemd[1000+i]: Started Authorization Manager
+Jun 15 02:36:48 server kernel[1000+i]: Started Clean php session files
+Jun 15 03:46:29 server network[1000+i]: Started Clean php session files
+Jun 15 02:32:26 server rsyslogd[1000+i]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket
+Jun 15 02:14:08 server cron[1000+i]: Started Clean php session files
+Jun 15 03:46:01 server kernel[1000+i]: System hostname changed to server-prod
+Jun 15 03:14:10 server sshd[1000+i]: Started Authorization Manager
+Jun 15 02:35:15 server systemd[1]: Started hidden_backdoor.service
+Jun 15 02:35:15 server hidden_backdoor: listening on [any] 31337 ...
+Jun 15 02:50:15 server kernel[2000+i]: Starting System Activity Accounting Tool
+Jun 15 02:51:15 server systemd[2000+i]: Started Discard unused blocks on filesystems
+Jun 15 02:52:15 server cron[2000+i]: Started Discard unused blocks on filesystems
+Jun 15 02:53:15 server cron[2000+i]: Starting System Activity Accounting Tool
+Jun 15 02:54:15 server systemd[2000+i]: Starting System Activity Accounting Tool
+Jun 15 02:55:15 server kernel[2000+i]: Starting System Activity Accounting Tool
+Jun 15 02:56:15 server kernel[2000+i]: Started LSB: automated crash report generation
+Jun 15 02:57:15 server cron[2000+i]: Starting System Activity Accounting Tool
+Jun 15 02:58:15 server systemd[2000+i]: Started LSB: automated crash report generation
+Jun 15 02:59:15 server kernel[2000+i]: Started Discard unused blocks on filesystems

@@ -1,0 +1,36 @@
+{
+  "question_id": "BNsjLglYldSQp4vf",
+  "title": "misc01",
+  "score": 500,
+  "real_score": 500,
+  "file_url": "https://g.ichunqiu.com/terminator/production/match_question/202609/d6741cacc1baa5bf0c55bac778f2c2d0.zip",
+  "is_solved": true,
+  "solved_number": 0,
+  "category": "misc",
+  "attributes": ["misc"],
+  "description": "某金融科技公司近期收到客户投诉：“个人财务信息疑似被第三方获取”。公司安全团队初步排查后，锁定了一份虚拟客户敏感数据的文件，怀疑该文件存在 “内部违规访问 + 外泄” 行为。作为企业安全分析师，你需要基于系统管理员提供的日志文件和数据安全政策，找出导致数据泄露的责任人及关键操作记录。",
+  "interactive": "false",
+  "capabilities": ["misc"],
+  "connection": [],
+  "extensions": {"misc": "misc"},
+  "_reproduction": {
+    "round": "round3_1700",
+    "local_attachment": "attachments/d6741cacc1baa5bf0c55bac778f2c2d0.zip",
+    "extracted": [
+      "attachments/access.log",
+      "attachments/customer_data.csv",
+      "attachments/policy.md",
+      "attachments/README.md"
+    ],
+    "recovered_flag": "flag{d408d94f340b6af596467799900086ca}",
+    "flag_input": "user_f1-2025-09-27-22:30:00-VIO44a2f",
+    "submit_evidence": "D:\\qwb_work\\agent\\ledger.jsonl (ts=2026-09-14 17:01:59, type=submit, result={code:0, message:恭喜您，回答正确}); work\\flags\\BNsjLglYldSQp4vf.txt",
+    "known_wrong_candidate": {
+      "value": "flag{3aad46a16002d6530308da992c5cacc3}",
+      "input": "user_f1-2025-09-27-14:40:00-LEG2e815",
+      "source": "work\\r3_misc\\misc01_report.txt 末行（比赛期间第一版分析，误把配额内第 2 次当违规）",
+      "verified": false
+    },
+    "fidelity": "A"
+  }
+}

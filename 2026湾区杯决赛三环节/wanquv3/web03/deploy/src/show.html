@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片加载导航器</title>
+    <style>
+        :root {
+            --primary-color: #4a6baf;
+            --secondary-color: #6c757d;
+            --gradient-start: #667eea;
+            --gradient-end: #764ba2;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+        }
+        
+        .container {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            width: 85%;
+            max-width: 600px;
+            text-align: center;
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 40px;
+            font-size: 2.8em;
+            font-weight: 600;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+            border-radius: 2px;
+        }
+        
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .btn {
+            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+            border: none;
+            color: white;
+            padding: 16px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--gradient-end) 0%, var(--gradient-start) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn:hover::before {
+            opacity: 1;
+        }
+        
+        .btn:active {
+            transform: translateY(2px);
+        }
+        
+        .btn:nth-child(1) {
+            --gradient-start: #667eea;
+            --gradient-end: #764ba2;
+        }
+        
+        .btn:nth-child(2) {
+            --gradient-start: #f78ca0;
+            --gradient-end: #fe9a8b;
+        }
+        
+        .btn:nth-child(3) {
+            --gradient-start: #43e97b;
+            --gradient-end: #38f9d7;
+        }
+        
+        footer {
+            margin-top: 40px;
+            color: var(--secondary-color);
+            font-size: 0.95em;
+            font-weight: 300;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+                width: 90%;
+            }
+            
+            h1 {
+                font-size: 2.2em;
+                margin-bottom: 30px;
+            }
+            
+            .btn {
+                padding: 14px 25px;
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>图片导航器</h1>
+        
+        <div class="button-container">
+            <button class="btn" onclick="window.location.href='/show_img.php?img_url=aHR0cDovLzEyNy4wLjAuMTo4MDgwLzFtOS9vbmUucG5n'">加载图片一</button>
+            <button class="btn" onclick="window.location.href='/show_img.php?img_url=aHR0cDovLzEyNy4wLjAuMTo4MDgwLzFtOS90d28ucG5n'">加载图片二</button>
+            <button class="btn" onclick="window.location.href='/show_img.php?img_url=aHR0cDovLzEyNy4wLjAuMTo4MDgwLzFtOS90aHJlZS5wbmc='">加载图片三</button>
+        </div>
+    </div>
+    
+    <footer>
+        © 2025 图片导航系统
+    </footer>
+
+    <script>
+        function navigateTo(page) {
+            // 在实际应用中，这里会跳转到对应的图片页面
+            // 由于是演示，我们只显示一个提示
+            alert(`将跳转到 ${page} (实际应用中会加载对应图片)`);
+            
+            // 实际跳转代码应该是：
+            // window.location.href = page;
+        }
+    </script>
+</body>
+</html>

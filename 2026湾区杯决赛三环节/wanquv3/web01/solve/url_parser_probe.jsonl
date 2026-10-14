@@ -1,0 +1,15 @@
+﻿{"input":"http://127.0.0.1.baidu.com:3456/secret","href":"http://127.0.0.1.baidu.com:3456/secret","hostname":"127.0.0.1.baidu.com","port":"3456","pathname":"/secret","whitelist_pass":true}
+{"input":"http://x.baidu.com@127.0.0.1:3456/secret","href":"http://x.baidu.com@127.0.0.1:3456/secret","hostname":"127.0.0.1","port":"3456","pathname":"/secret","whitelist_pass":false}
+{"input":"http://x.baidu.com%2f@127.0.0.1:3456/secret","href":"http://x.baidu.com%2f@127.0.0.1:3456/secret","hostname":"127.0.0.1","port":"3456","pathname":"/secret","whitelist_pass":false}
+{"input":"http://x.baidu.com\\@127.0.0.1:3456/secret","href":"http://x.baidu.com/@127.0.0.1:3456/secret","hostname":"x.baidu.com","port":"","pathname":"/@127.0.0.1:3456/secret","whitelist_pass":true}
+{"input":"http://x.baidu.com#@127.0.0.1:3456/secret","href":"http://x.baidu.com/#@127.0.0.1:3456/secret","hostname":"x.baidu.com","port":"","pathname":"/","whitelist_pass":true}
+{"input":"http://x.baidu.com?.baidu.com:3456/secret","href":"http://x.baidu.com/?.baidu.com:3456/secret","hostname":"x.baidu.com","port":"","pathname":"/","whitelist_pass":true}
+{"input":"http://x.baidu.com:3456/secret","href":"http://x.baidu.com:3456/secret","hostname":"x.baidu.com","port":"3456","pathname":"/secret","whitelist_pass":true}
+{"input":"http://127.0.0.1:3456/secret","href":"http://127.0.0.1:3456/secret","hostname":"127.0.0.1","port":"3456","pathname":"/secret","whitelist_pass":false}
+{"input":"http://localhost:3456/secret","href":"http://localhost:3456/secret","hostname":"localhost","port":"3456","pathname":"/secret","whitelist_pass":false}
+{"input":"http://x.baidu.com\\.attacker.tld:3456/secret","href":"http://x.baidu.com/.attacker.tld:3456/secret","hostname":"x.baidu.com","port":"","pathname":"/.attacker.tld:3456/secret","whitelist_pass":true}
+{"input":"http://x.baidu.com%00.attacker.tld:3456/secret","error":"Invalid URL"}
+{"input":"http://127.1:3456/secret","href":"http://127.0.0.1:3456/secret","hostname":"127.0.0.1","port":"3456","pathname":"/secret","whitelist_pass":false}
+{"input":"http://0x7f.0.0.1:3456/secret","href":"http://127.0.0.1:3456/secret","hostname":"127.0.0.1","port":"3456","pathname":"/secret","whitelist_pass":false}
+{"input":"http://2130706433:3456/secret","href":"http://127.0.0.1:3456/secret","hostname":"127.0.0.1","port":"3456","pathname":"/secret","whitelist_pass":false}
+{"input":"http://[::1]:3456/secret","href":"http://[::1]:3456/secret","hostname":"[::1]","port":"3456","pathname":"/secret","whitelist_pass":false}

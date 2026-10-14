@@ -1,0 +1,24 @@
+{
+  "question_id": "LT50RTMIQsSmWJAu",
+  "title": "misc02",
+  "score": 500,
+  "real_score": 500,
+  "file_url": "https://g.ichunqiu.com/terminator/production/match_question/202609/97c3cb84b53f44e4c5d78ed4789bd07c.zip",
+  "is_solved": true,
+  "solved_number": 1,
+  "category": "misc",
+  "attributes": ["misc"],
+  "description": "",
+  "interactive": "false",
+  "capabilities": ["misc"],
+  "connection": [],
+  "extensions": {"misc": "misc"},
+  "_reproduction": {
+    "round": "round2_1330",
+    "local_attachment": "attachments/97c3cb84b53f44e4c5d78ed4789bd07c.zip",
+    "extracted": "attachments/shell.pcapng",
+    "recovered_flag": "flag{7d6f17a4-2b0a-467d-8a42-66750368c249}",
+    "submit_evidence": "D:\\2026\\湾区杯\\决赛\\work\\submit_results_live.json (ts=2026-09-14 13:33:19, code=0, status=1, message=答案正确，该题目已被攻克，不计分)",
+    "fidelity": "A"
+  }
+}

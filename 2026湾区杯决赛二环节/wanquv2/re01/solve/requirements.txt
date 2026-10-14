@@ -1,0 +1,5 @@
+# re01 (round2_1330) 参考解法无第三方依赖。
+# 可选依赖（仅用于交叉校验密表）：
+#   - binutils 提供的 `objdump`（Linux: binutils / Windows: TDM-GCC / MinGW-W64 自带）
+#     * 不装也能跑：加 `--no-crosscheck` 即只用内嵌常量表求解。
+# Python 3.8+ 标准库即可（argparse / os / re / subprocess / sys）。

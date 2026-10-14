@@ -1,0 +1,27 @@
+# round2 web03 「i like escape」—— 本地可复现部署
+#
+# 起容器：
+#   docker compose -f deploy/docker-compose.yml up -d --build
+#   → http://127.0.0.1:8080/        首页
+#   → http://127.0.0.1:8080/www.zip 源码包（题面直接点名）
+#
+# 打靶：
+#   python solve/solve.py --target http://127.0.0.1:8080 --dump-source
+#
+# 注意 flag 路径：容器启动时 flag 被写到 **随机文件名** /var/www/html/flag_<hex>，
+# 所以 `FILE gadget 读 /flag` 会失败（与原题一致），必须用 RCE 列目录/通配。
+# 想固定路径便于断言时：docker compose up 前设置 FLAG_RANDOM_SUFFIX=fixed
+# 显式工程名，避免所有题目的 deploy 目录同名互踩容器
+name: qwb-r2-web03
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: qwb-r2-web03
+    environment:
+      # 固定 flag 文件名后缀（默认随机 18 位 hex，还原原题 /flag_182e805265d83db03d9c）
+      FLAG_RANDOM_SUFFIX: ""
+    ports:
+      - "8080:80"
+    restart: unless-stopped

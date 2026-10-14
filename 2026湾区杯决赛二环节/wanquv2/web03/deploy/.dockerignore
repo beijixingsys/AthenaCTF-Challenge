@@ -1,0 +1,5 @@
+﻿# 调试端点与派生产物不进镜像
+src/_debug.php
+solve/
+*.pyc
+__pycache__/

@@ -1,0 +1,46 @@
+# 环节二 web02 —— 文件管理系统（可解档重建 + 忠实档可切回）
+#
+# 显式工程名：多题目录都叫 deploy/，不写 name: 会用目录名当工程名，
+# 导致不同题的容器互相顶替（见 AGENTS §6.1.1）。
+name: qwb-r2-web02
+
+services:
+  web02:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        # 想换 flag 只改这两处的字符串即可（build arg + 运行时环境变量）
+        FLAG: "flag{PLACEHOLDER_web02r2_replace_me}"
+        # ★ 读取路径档位（默认 unanchored = 可解档），四档见 src/download.php 顶部注释
+        WEB02_VARIANT: "unanchored"
+        # 兼容旧开关；平台适配镜像使用 WEB02_VARIANT 显式选择档位
+        WEAK_REGEX: "0"
+    image: web02-fms:latest
+    # ★ 容器名必须与工程名（name: qwb-r2-web02）保持一致。
+    #   历史教训：此处原先硬编码 container_name: web02_fms，而工程名从默认的
+    #   "deploy" 改成 "qwb-r2-web02" 之后，旧容器就不再受 compose 管理 →
+    #   `docker compose down` 清不掉它 → 再次 `up` 直接报
+    #   "Conflict. The container name \"/web02_fms\" is already in use"。
+    #   若仍遇到该冲突：docker rm -f qwb-r2-web02-app
+    container_name: qwb-r2-web02-app
+    environment:
+      FLAG: "flag{PLACEHOLDER_web02r2_replace_me}"
+      # ★★ 读取路径档位：WEB02_VARIANT 优先级最高，其次才是旧的 WEAK_REGEX ★★
+      #   anchored    忠实复刻（与线上实测一致）—— 【应用层不可解】
+      #   unanchored  ★默认★ 白名单漏锚定 → `?file=../../../flag` 可读 flag  ✅ 可解
+      #   none        零校验（README 变体 B）                    ✅ 可解
+      #   weak        假设 A′ 研究档（可绕校验、不可利用）
+      #
+      #   必须用 ${VAR:-默认} 形式，宿主环境变量 / .env 才能真正驱动它。
+      #   踩过的坑：原先写死 `WEAK_REGEX: "0"`（字面量），于是
+      #   `$env:WEAK_REGEX=1` + `up -d --force-recreate` **完全不生效**。
+      #
+      #   切换（★ 改完必须带 --build，--force-recreate 只用旧镜像）：
+      #     PowerShell:  $env:WEB02_VARIANT='anchored'; docker compose up -d --build --force-recreate
+      #     bash:        WEB02_VARIANT=anchored docker compose up -d --build --force-recreate
+      WEB02_VARIANT: "${WEB02_VARIANT:-unanchored}"
+      WEAK_REGEX: "${WEAK_REGEX:-0}"
+    ports:
+      - "8090:80"
+    restart: unless-stopped

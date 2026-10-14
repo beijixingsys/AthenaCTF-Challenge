@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>应用中心</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container {
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+    .app-card {
+        width: 200px;
+        height: 200px;
+        background: #fff;
+        border-radius: 20px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        text-decoration: none;
+        color: #333;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .app-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 30px rgba(0,0,0,0.3);
+    }
+    .icon {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 48px;
+        background: #f0f0f0;
+        border-radius: 50%;
+        color: #4CAF50;
+    }
+    .app-card h3 {
+        margin: 0;
+        font-size: 20px;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <!-- FTP 工具卡片 -->
+        <a href="ftp.php" class="app-card">
+            <div class="icon">📁</div>
+            <h3>FTP 工具</h3>
+        </a>
+
+        <!-- 图片导航卡片 -->
+        <a href="show.html" class="app-card">
+            <div class="icon">🖼️</div>
+            <h3>图片导航</h3>
+        </a>
+    </div>
+</body>
+</html>

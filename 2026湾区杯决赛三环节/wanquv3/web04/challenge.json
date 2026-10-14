@@ -1,0 +1,20 @@
+{
+  "question_id": "agx_XF9JxuV545mS",
+  "title": "web04",
+  "score": 500,
+  "real_score": 500,
+  "file_url": "",
+  "is_solved": true,
+  "category": "web",
+  "attributes": ["web"],
+  "description": "",
+  "interactive": "true",
+  "capabilities": ["web"],
+  "connection": {
+    "docker_url": "https://eci-2ze6xkwkd3bq8xtkkyb1.cloudeci1.ichunqiu.com:9999",
+    "docker_ip": "eci-2ze6xkwkd3bq8xtkkyb1.cloudeci1.ichunqiu.com",
+    "docker_port": 9999
+  },
+  "extensions": {"web": "web"},
+  "flag": "flag{6a414b5e-897a-40c6-9925-26ad77b5d092}"
+}

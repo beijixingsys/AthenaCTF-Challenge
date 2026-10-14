@@ -1,0 +1,2 @@
+# 复现用 flag（比赛真实 flag 见 README §7；注入方式：COPY flag /flag）
+flag{local-r2-web01-swap-dotfile-leak}

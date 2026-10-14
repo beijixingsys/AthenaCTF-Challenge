@@ -1,0 +1,24 @@
+{
+  "question_id": "NwH7yHPUhNL3YUEx",
+  "title": "pwn02",
+  "score": 500,
+  "real_score": 500,
+  "file_url": "https://g.ichunqiu.com/terminator/production/match_question/202609/1e5fc5c908ca3ea57a1f2acdf99f8530.zip",
+  "is_solved": true,
+  "category": "pwn",
+  "attributes": ["pwn"],
+  "description": "（平台 description 为空）",
+  "interactive": "true",
+  "capabilities": ["pwn"],
+  "connection": {
+    "docker_url": "nc 47.94.108.28 34893",
+    "docker_ip": "47.94.108.28",
+    "docker_port": 34893
+  },
+  "extensions": {"pwn": "pwn"},
+  "_notes": {
+    "connection_warning": "以上为 2026-09-14 比赛期间的原始容器地址（challenges_live.json 快照），平台每次 reset 后会重新下发新地址，复现请以 agent show 的 connection.docker_url 为准。",
+    "flag": "flag{403cc1ed-aba3-4b2d-af5e-b9580bfde22c}",
+    "submit_ts": "2026-09-14 13:44:58"
+  }
+}

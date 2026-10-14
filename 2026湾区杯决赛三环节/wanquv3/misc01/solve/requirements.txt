@@ -1,0 +1,7 @@
+# round3_1700 / misc01 — 参考解法依赖
+#
+# 仅使用 Python 3.8+ 标准库（argparse / collections / hashlib / os / re / sys），
+# 无需任何第三方包。
+#
+# 运行：
+#   python solve/solve.py --dir attachments

@@ -1,0 +1,42 @@
+{
+  "question_id": "eW3YXjDdiSI_BDGY",
+  "title": "web02",
+  "score": 500,
+  "real_score": 500,
+  "file_url": "",
+  "is_solved": false,
+  "category": "web",
+  "attributes": [
+    "web"
+  ],
+  "description": "这是一个文件管理系统，在这里你可以存储和下载文件，请测试这个文件管理系统是否存在安全问题，你的最终目标是获取根目录下面的flag。",
+  "interactive": "true",
+  "capabilities": [
+    "web"
+  ],
+  "connection": {
+    "docker_url": "https://eci-2zeb6tjmds9y8b4igj1v.cloudeci1.ichunqiu.com:80",
+    "docker_ip": "eci-2zeb6tjmds9y8b4igj1v.cloudeci1.ichunqiu.com",
+    "docker_port": 80
+  },
+  "extensions": {
+    "web": "web",
+    "local_rebuild": {
+      "note": "本工程提供可解档并把默认切到它；比赛记录不变（is_solved 仍为 false）",
+      "solvable_default": true,
+      "variant_switch": "WEB02_VARIANT (docker-compose.yml / Dockerfile ARG+ENV)",
+      "variants": {
+        "unanchored": "默认；白名单漏锚定 /[a-zA-Z0-9.]+/ ⇒ ?file=../../../flag 可读 flag（可解）",
+        "none": "零校验（README §4.1 变体 B）（可解）",
+        "anchored": "忠实复刻线上锚定白名单 ⇒ 应用层不可解（一键切回）",
+        "weak": "假设 A′ 研究档：可绕校验、不可利用"
+      },
+      "verified": {
+        "solvable_exit_code": 0,
+        "faithful_exit_code": 2
+      },
+      "probe": "deploy/web02_read_probe.py",
+      "is_faithful_to_online": false
+    }
+  }
+}

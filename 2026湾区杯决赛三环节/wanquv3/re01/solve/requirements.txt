@@ -1,0 +1,14 @@
+# round3_1700 re01 参考解法无第三方依赖。
+# Python 3.8+ 标准库即可（argparse / hashlib / os / struct / sys）。
+#
+# 注意：**不需要** objdump / readelf / z3 —— 脚本已内嵌 VM 程序（4353 B）与目标常量（48 B）。
+#   * `--bin ../attachments/main` 只是可选的交叉校验（纯 Python 读文件偏移，不调用外部工具）。
+#   * 比赛中曾用 z3 符号执行路线（work\r3_re01\vmrun.py --solve），本脚本改用"加法可逆"反演，
+#     不需要 z3、更快。
+#
+# 若要**实机执行**原 ELF 做 yes/no 闭环（可选，本机 Windows 无 glibc 跑不了）：
+#   需要 glibc 2.34+ 与 libgcc_s.so.1（Debian bookworm-slim / Ubuntu 22.04+ / 任意现代 Linux）。
+#   最省事的方式是 deploy/Dockerfile：
+#     docker build -t timu/r3-re01:local deploy/
+#     docker run -d --rm -p 9999:9999 -v "$PWD/attachments:/opt/re01:ro" timu/r3-re01:local
+#     printf 'flag{9bc396fd-75fb-484c-b193-f3ae596e6317}\n' | nc 127.0.0.1 9999    # -> yes

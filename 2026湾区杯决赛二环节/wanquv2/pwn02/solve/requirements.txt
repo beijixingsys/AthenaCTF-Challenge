@@ -1,0 +1,3 @@
+﻿# pwn02 solve 脚本只依赖 Python 3 标准库（socket / struct / re / time）。
+# 若要用 pwntools 版本脚本： pwntools>=4.9
+

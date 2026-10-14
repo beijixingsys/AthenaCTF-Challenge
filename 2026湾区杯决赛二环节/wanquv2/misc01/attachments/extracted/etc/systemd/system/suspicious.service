@@ -1,0 +1,10 @@
+[Unit]
+Description=Suspicious Service (Actually harmless)
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/echo "This service is harmless"
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

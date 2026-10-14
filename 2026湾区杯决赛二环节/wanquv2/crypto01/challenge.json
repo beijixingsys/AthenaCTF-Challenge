@@ -1,0 +1,37 @@
+{
+  "question_id": "Adbvf8bTTCGF4LLU",
+  "title": "crypto01",
+  "score": 500,
+  "real_score": 500,
+  "file_url": "https://g.ichunqiu.com/terminator/production/match_question/202609/ad75cfca79427cd8476db391aa0b5545.zip",
+  "is_solved": true,
+  "category": "crypto",
+  "attributes": [
+    "crypto"
+  ],
+  "description": "",
+  "interactive": "false",
+  "capabilities": [
+    "crypto"
+  ],
+  "connection": [],
+  "extensions": {
+    "crypto": "crypto"
+  },
+  "_restore_notes": {
+    "round": "round2_1330",
+    "platform_name": "crypto01",
+    "is_solved_source": "比赛提交回执 status=1（2026-09-14 13:33:26，work/submit_results_live.json 第 3 条）；平台快照 challenges_live.json 抓取于解题前，其值为 false",
+    "flag": "flag{6500e76e-15fb-42e8-8f29-a309ab73ba38}",
+    "attachment_local": "attachments/ad75cfca79427cd8476db391aa0b5545.zip",
+    "attachment_md5": "7b382f1ea5072d06fcd0f2f81b4e5e26",
+    "inner_files": [
+      {
+        "name": "cc.html",
+        "size": 699830,
+        "md5": "3cc3f4d95efddaa400c32591666a5eae"
+      }
+    ],
+    "description_note": "平台 description 为空字符串；题面信息全部来自附件 cc.html（title=AES Encrypt - CyberChef，输入面板提示语见 README §1）"
+  }
+}

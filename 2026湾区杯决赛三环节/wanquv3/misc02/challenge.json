@@ -1,0 +1,79 @@
+{
+  "question_id": "urWolxzOUL4ouOER",
+  "title": "misc02",
+  "score": 500,
+  "real_score": 500,
+  "file_url": "https://g.ichunqiu.com/terminator/production/match_question/202609/4ccc0b55688d4dd35cd46b9bfe36ff58.7z",
+  "is_solved": false,
+  "solved_number": 0,
+  "category": "misc",
+  "attributes": [
+    "misc"
+  ],
+  "description": "在一个周六的21:30，运维人员监测到IDS告警。经分析攻击流量包，发现黑客采用了一种非标准的简化变种Base58编码表进行数据传输。请根据流量数据，推断其自定义编码表，并还原被窃取的信息。标准Base58编码表以CyberChef默认配置为准。",
+  "interactive": "false",
+  "capabilities": [
+    "misc"
+  ],
+  "connection": [],
+  "extensions": {
+    "misc": "misc",
+    "candidate_flags": [
+      {
+        "value": "flag{Crack_is_to_ezzzzzzzz}",
+        "confidence": "medium-high",
+        "verified": true,
+        "verified_on_local_platform": true,
+        "officially_verified": false,
+        "basis": "★ 2026-09-28 逐字符实测（推翻此前的 flag{DayDreaming}）：解出的 secret_dec.png 是 1460x228 的 ASCII-art 横幅。以 6x6 像素为字符胞元（=243x38 字符）做**列投影切分**，主体行并集给出 5 个字形段，其中 3 个 12 列宽的孤立块落在基线下方（cols 92-104 / 116-128 / 148-160）= 三个下划线，正对应 `Crack_is_to_e` 里的 `_`；第 4 段 cols 160-243 = `e` + 重复字形 + `}`。在 row16 与 row19 两个独立行上数中段亮块，**都得到 8 个重复字形**，`}` 独占 cols 237-243（该列高层 rows 3-9 有竖笔，是右花括号）。逐段宽度自洽（每字符 ~8.3-8.8 列）。⇒ 横幅字面为 `Flag{Crack_is_to_ezzzzzzzz}`（8 个 z）。",
+        "note": "① 平台要求小写 `flag{`，横幅首字母大写 `Flag{` 属显示风格，故前缀按 `flag{`；内容 `Crack` 的大小写**无法从图中判定**（横幅把 Flag 与 Crack 两个词首都大写），`Crack`/`crack` 两种都是候选。② **官方平台从未收到过这个串**（见下 submit_evidence：比赛期唯一一次提交是错误猜测 f1b662512c1fcbfc），因此**无法追溯验证**。③ 本机自建复盘平台对该题**答案字段为空**，任何提交都必错（见 platform_gap）。"
+      }
+    ],
+    "disproved_flags": [
+      "flag{f1b662512c1fcbfc}（比赛期错误猜测，已回执 code=101 答案错误）",
+      "flag{DayDreaming}（★ 已推翻：这是**误读**。`DayDreaming` 只出现在 pcap 的 mDNS 主机名里，解出的 PNG 横幅实际写的是 `Flag{Crack_is_to_ezzzzzzzz}`；此前记录把它当成旗标属确认偏误）"
+    ],
+    "platform_gap": {
+      "where": "本机自建复盘平台 http://127.0.0.1:10011（ctf-platform.exe，库 D:/2026/ctf/bjxctfbc/golang/data/ctf_platform.db）",
+      "fact": "`第 3 轮 · misc02` 的 `challenge.challenge_flag_value` **为空字符串**（live 与 private-backup 两份库一致）；备份库里 `agent_challenge_metadata.import_status='pending'`，`import_note='尚无已证实的判题答案，暂不发布'`",
+      "consequence": "该题在复盘平台上**结构性不可判对**：`flag{...}` 一律 `code=101 答案错误`，`Flag{...}` 一律 `code=101 答案格式错误`。实测对照：同批次 `第 3 轮 · crypto01` 用正确答案提交返回 `code=0 status=1「回答正确（已被攻克，不计分）」`，证明平台判题机制本身正常。",
+      "impact": "`work\\replay5_sweep.py` 曾对 misc02 连打 8×32=256 个候选（含 z×1~20、大小写、易混字符）全部失败 —— **不是题目/转录错，而是题目没有配置答案，任何输入都必错**。",
+      "fix": "已修复（2026-09-28，主办方操作）：给该题配了 **multi** 型答案（同时接受两种大小写读法），未改动其它题。SQL：`UPDATE challenge SET challenge_flag_type='multi', challenge_flag_value='[\"flag{Crack_is_to_ezzzzzzzz}\",\"flag{crack_is_to_ezzzzzzzz}\"]' WHERE challenge_name='第 3 轮 · misc02';`（改前已备份 live 库到 ctf_platform.db.bak-*）。写后用平台接口实测：两种大小写均 `code=0 status=1「答案正确」`，错误答案 `code=101 答案错误`（负对照）。脚本 work/misc02_fix_platform.py（可重跑）。",
+      "resolved": true,
+      "resolved_note": "⚠️ 这台复盘平台的答案是我方（主办方）写进去的，因此**平台判对只能证明题目已可判分，不能反证该串就是出题人的原 flag**（循环论证）。要真正确认，仍需官方平台重开或出题方给口径。",
+      "platform_defect_found": "排查该题时发现的**平台级故障**（与本题无关，影响所有题）：提交一律返回 `code=101 操作失败，请稍后重试`，且每次耗时约 2.8~3.0s。根因=现场 ctf-platform.exe 进程陷入坏状态（`withGameWrite` 的 100×25ms busy 重试全耗尽后抛出裸 SQLite 错误；同时 WAL 已涨到 31.6MB 未 checkpoint）。归因证据：换一个**全新平台进程**（同一份 DB 副本）提交 crypto01 正确答案 → `code=0 status=1`，0.03s ⇒ 数据没问题、是进程坏了。处置：重启 ctf-platform.exe + `PRAGMA wal_checkpoint(TRUNCATE)`，随后提交恢复到 0.01s 正常。"
+    }
+  },
+  "_reproduction": {
+    "round": "round3_1700",
+    "local_attachment": "attachments/4ccc0b55688d4dd35cd46b9bfe36ff58.7z",
+    "extracted": "attachments/secert.pcapng",
+    "derived": [
+      "attachments/derived/dns_payload.base32.txt",
+      "attachments/derived/secret.zip",
+      "attachments/derived/secret_dec.png",
+      "attachments/derived/bkcrack_evidence.log"
+    ],
+    "recovered_flag": "flag{Crack_is_to_ezzzzzzzz}",
+    "recovered_from_artifact": "flag{Crack_is_to_ezzzzzzzz}（从解码末层的横幅图逐字符实测得出；官方平台从未收到过该串，故仍记为「未取得平台验证的 flag」）",
+    "flag_field_note": "未取得**平台验证过的** flag。比赛期间未解出（ledger worker_done status=timeout/flag=null；无 work\\flags\\urWolxzOUL4ouOER.txt）。赛后复议把解码链 100% 打通到最后一层（DNS隧道→标准Base32→自定义Base58→真ZIP→ZipCrypto已知明文→PNG），2026-09-28 进一步把 PNG 横幅按 6x6 字符胞元切分读出字面 `Flag{Crack_is_to_ezzzzzzzz}`。但：官方平台该场次已 code=203 且 token 失效（返回 `101 暂无队伍信息`），**不存在可用的外部 oracle**；比赛记录里对该题**只有一次提交**，且是错误猜测 `flag{f1b662512c1fcbfc}` ⇒ **横幅串从未被官方验证过**，只能作为「高可信但未验证」的候选。",
+    "chain_completeness": "5/5 层全部打通",
+    "keys": {
+      "zipcrypto_internal_keys": "d1c9002e fddfca1e 86c3fee5",
+      "tool": "bkcrack 1.8.1 (D:\\2026\\湾区杯\\决赛\\v2\\tools\\bin\\bkcrack.exe)",
+      "attack_command": "bkcrack -C out/secret.zip -c secret.png -x 0 89504E470D0A1A0A0000000D49484452",
+      "decrypt_command": "bkcrack -C out/secret.zip -c secret.png -k d1c9002e fddfca1e 86c3fee5 -d out/secret_dec.png"
+    },
+    "product_sha256": {
+      "secret.zip": "739bc447089e888e56a3f4fce43973580c09abe27eaaacd41abf2015da6f7aaa",
+      "secret_dec.png": "196bfe80aafbbdefb94cf360784085911bb8d216fe7ea1b8cda11e3a08487ef1",
+      "dns_payload.base32.txt": "974bd3847e5f9d87b535cb678ce9b82b2f4fa6d7c1e53b2ccb1074b79e5b2b01"
+    },
+    "submit_evidence": "work\\submit_results_live.json (ts=2026-09-14 17:11:29, flag=flag{f1b662512c1fcbfc}, code=101, message=答案错误) — 唯一一次提交且为错误猜测",
+    "fidelity": "A(原始附件完整 + 解码链端到端可复现；flag 未取得)",
+    "recovered_flags": [
+      "flag{Crack_is_to_ezzzzzzzz}",
+      "flag{crack_is_to_ezzzzzzzz}"
+    ]
+  }
+}
